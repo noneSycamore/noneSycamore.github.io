@@ -1,0 +1,596 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Sycamore">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="记录：我尝试搭建Typecho的博客——EasyBe，并粗略美化修改（挺精美的主题）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EasyBe主题设置+修改">
+<meta property="og:url" content="https://blog.sycamore.top/2022/03/15/EasyBe%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE-%E4%BF%AE%E6%94%B9/index.html">
+<meta property="og:site_name" content="Sycamoreの振り回す記録">
+<meta property="og:description" content="记录：我尝试搭建Typecho的博客——EasyBe，并粗略美化修改（挺精美的主题）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/Typecho%E5%AE%89%E8%A3%85%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/1.png">
+<meta property="article:published_time" content="2022-03-14T16:08:40.000Z">
+<meta property="article:modified_time" content="2022-03-14T16:12:52.664Z">
+<meta property="article:author" content="Sycamore">
+<meta property="article:tag" content="web服务器">
+<meta property="article:tag" content="Typecho">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/Typecho%E5%AE%89%E8%A3%85%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/1.png">
+  
+  
+  <title>EasyBe主题设置+修改 - Sycamoreの振り回す記録</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.sycamore.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","app_key":"UtqevxNsaLBA4HlRcwUtwIYS","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sycamore&#39; Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/postpage.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="EasyBe主题设置+修改">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Sycamore
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-15 00:08" pubdate>
+        2022年3月15日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      16k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      133 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">EasyBe主题设置+修改</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：几秒前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>记录：我尝试搭建Typecho的博客——EasyBe，并粗略美化修改（挺精美的主题）</p>
+<span id="more"></span>
+<p>子域名下还可以搭网站，所以我就尝试搭了一下Typecho的博客，</p>
+<h2 id="EasyBe主题安装"><a href="#EasyBe主题安装" class="headerlink" title="EasyBe主题安装"></a>EasyBe主题安装</h2><p>Typecho安装请看：</p>
+<p>使用宝塔将EasyBe主题压缩包上传到usr&#x2F;themes文件夹下，然后解压即可完成主题的初步安装</p>
+<h2 id="EasyBe主题配置"><a href="#EasyBe主题配置" class="headerlink" title="EasyBe主题配置"></a>EasyBe主题配置</h2><h3 id="吐点槽"><a href="#吐点槽" class="headerlink" title="吐点槽"></a>吐点槽</h3><p>这个主题大概是由于正在开发中的原因，我们直接启用主题后转到前端是空白的，<br>由于是第一次接触Typecho，之前尝试安装的其他Typecho主题启用之后都是有一个默认的画面的，所以我直接懵逼了，后面想到大概是要在“设置外观”界面进行配置吧 (￣_￣|||)</p>
+<p>虽然这一开始也很让人困惑，但是在参考了<a target="_blank" rel="noopener" href="https://github.com/wangyang0210/EasyBe" title="开发者的GitHub">开发者的GitHub</a>之后，还是完成了初步的配置，<br>总体来说，这个主题还是挺好看的<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb1.jpg" srcset="/img/loading.gif" lazyload alt="如图是侧边栏展开的首页封面图" title="如图是菜单栏展开的首页封面图"><br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb2.jpg" srcset="/img/loading.gif" lazyload alt="如图是页脚的画面，挺精美的" title="如图是页脚的画面，挺精美的"></p>
+<h3 id="具体方法"><a href="#具体方法" class="headerlink" title="具体方法"></a>具体方法</h3><h4 id="头像。昵称、职业、居住地"><a href="#头像。昵称、职业、居住地" class="headerlink" title="头像。昵称、职业、居住地"></a><strong>头像</strong>。<strong>昵称</strong>、<strong>职业</strong>、<strong>居住地</strong></h4><p>这些就不说了，这些信息会出现在侧边栏顶部区域，</p>
+<h4 id="CNZZ统计"><a href="#CNZZ统计" class="headerlink" title="CNZZ统计"></a><strong>CNZZ统计</strong></h4><p>这个就是添加一个站点统计功能，可以不加，随个人喜好。该主题对样式进行了优化，首先要去 CNZZ（<a target="_blank" rel="noopener" href="https://www.umeng.com/%EF%BC%89">https://www.umeng.com/）</a> 配置好统计的网站信息，然后把你的统计ID，填入下方代码对应的位置就可以了。</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;id_cnzz_stat_icon&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;cnzz_stat_icon_你的统计ID&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&#x27;https://s19.cnzz.com/z_stat.php?id=你的统计ID&amp;online=1&amp;show=line&#x27;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&#x27;text/javascript&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
+<p>配置好之后会显示在页脚友情链接下方的位置</p>
+<h4 id="备案信息"><a href="#备案信息" class="headerlink" title="备案信息"></a><strong>备案信息</strong></h4><p>这个就按照给的这个代码来就行了，你要做的只是去给你的域名备个案，然后更改一下代码中的汉字部分即可</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:300px;margin:0 auto; padding:20px 0;&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=你的备案号&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display:inline-block;text-decoration:none;height:20px;line-height:20px;&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/pic//imgs/beian_icon.png&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;float:left;&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;&quot;</span>&gt;</span>你的备案信息<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
+<h4 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a><strong>全局配置</strong></h4><p>这里才是<strong>重点</strong>，要知道前面的内容配置好之后，大概率你的前端还是空白的，<br>因为正如其名，全局的配置基本都给放到这里来了，不过这样也挺好，因为这就意味着，我们可以更加自由地更改、设计博客的内容。这也是我特别喜欢这个主题的原因。<br>这里先放出一个GitHub上给出的原配置，可以直接复制看看效果(●’◡’●)</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- global var --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">//博客全局配置</span></span><br><span class="language-javascript">    <span class="hljs-variable language_">window</span>.<span class="hljs-property">cnblogsConfig</span> = &#123;</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- GitHub文件源配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-title class_">GhUserName</span>: <span class="hljs-string">&#x27;wangyang0210&#x27;</span>, </span><br><span class="language-javascript">        <span class="hljs-title class_">GhRepositories</span>: <span class="hljs-string">&#x27;EasyBe&#x27;</span>, </span><br><span class="language-javascript">        <span class="hljs-title class_">GhVersions</span> : <span class="hljs-string">&#x27;80e8d7f9b7acb7ab1318ac39cbfad7b0ed908edd&#x27;</span>, </span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 基础信息配置 ----custom</span></span><br><span class="language-javascript">        blogUser      : <span class="hljs-string">&quot;。思索&quot;</span>,</span><br><span class="language-javascript">        blogAvatar    : </span><br><span class="language-javascript">        <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp&quot;</span>,</span><br><span class="language-javascript">        blogStartDate : <span class="hljs-string">&quot;2019-8-1&quot;</span>, </span><br><span class="language-javascript">      </span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 菜单配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">menuCustomList</span>: &#123; </span><br><span class="language-javascript">            </span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript">        </span><br><span class="language-javascript"></span><br><span class="language-javascript">       <span class="hljs-comment">// ---- 网站配置 ----</span></span><br><span class="language-javascript">        webpageTitleOnblur        : <span class="hljs-string">&quot;(◍´꒳`◍) Hi, MyFriend&quot;</span>, </span><br><span class="language-javascript">        webpageTitleOnblurTimeOut : <span class="hljs-number">500</span>, </span><br><span class="language-javascript">        webpageTitleFocus         : <span class="hljs-string">&quot;(*´∇｀*) 欢迎回来！&quot;</span>, </span><br><span class="language-javascript">        webpageTitleFocusTimeOut  : <span class="hljs-number">1000</span>, </span><br><span class="language-javascript">        webpageIcon : <span class="hljs-string">&quot;https://files.cnblogs.com/files/wangyang0210/blog_logo.gif&quot;</span>, </span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 进度条配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">progressBar</span>: &#123;</span><br><span class="language-javascript">            id      : <span class="hljs-string">&#x27;top-progress-bar&#x27;</span>,</span><br><span class="language-javascript">            color   : <span class="hljs-string">&#x27;#77b6ff&#x27;</span>,</span><br><span class="language-javascript">            height  : <span class="hljs-string">&#x27;2px&#x27;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">duration</span>: <span class="hljs-number">0.2</span></span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- Loading配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">loading</span>: &#123;</span><br><span class="language-javascript">            <span class="hljs-attr">rebound</span>: &#123;</span><br><span class="language-javascript">                <span class="hljs-attr">tension</span>: <span class="hljs-number">16</span>,</span><br><span class="language-javascript">                <span class="hljs-attr">friction</span>: <span class="hljs-number">5</span></span><br><span class="language-javascript">            &#125;,</span><br><span class="language-javascript">            <span class="hljs-attr">spinner</span>: &#123;</span><br><span class="language-javascript">                <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;spinner&#x27;</span>,</span><br><span class="language-javascript">                <span class="hljs-attr">radius</span>: <span class="hljs-number">90</span>,</span><br><span class="language-javascript">                <span class="hljs-attr">sides</span>: <span class="hljs-number">3</span>,</span><br><span class="language-javascript">                <span class="hljs-attr">depth</span>: <span class="hljs-number">4</span>,</span><br><span class="language-javascript">                <span class="hljs-attr">colors</span>: &#123;</span><br><span class="language-javascript">                    <span class="hljs-attr">background</span>: <span class="hljs-string">&#x27;#f0f0f0&#x27;</span>,</span><br><span class="language-javascript">                    <span class="hljs-attr">stroke</span>: <span class="hljs-string">&#x27;#272633&#x27;</span>,</span><br><span class="language-javascript">                    <span class="hljs-attr">base</span>: <span class="hljs-literal">null</span>,</span><br><span class="language-javascript">                    <span class="hljs-attr">child</span>: <span class="hljs-string">&#x27;#272633&#x27;</span></span><br><span class="language-javascript">                &#125;,</span><br><span class="language-javascript">                <span class="hljs-attr">alwaysForward</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// When false the spring will reverse normally.</span></span><br><span class="language-javascript">                <span class="hljs-attr">restAt</span>: <span class="hljs-number">0.5</span>,         <span class="hljs-comment">// A number from 0.1 to 0.9 || null for full rotation</span></span><br><span class="language-javascript">                <span class="hljs-attr">renderBase</span>: <span class="hljs-literal">false</span></span><br><span class="language-javascript">            &#125;</span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 页面动效配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">homeTopAnimationRendered</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// true || false ,是否渲染主页头图动效</span></span><br><span class="language-javascript">        <span class="hljs-attr">homeTopAnimation</span>: &#123; <span class="hljs-comment">// 主页头图动效设置</span></span><br><span class="language-javascript">            <span class="hljs-attr">radius</span>: <span class="hljs-number">15</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">density</span>: <span class="hljs-number">0.2</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;rgba(255,255,255, .2)&#x27;</span>, <span class="hljs-comment">// 颜色设置，“random” 为随机颜色</span></span><br><span class="language-javascript">            <span class="hljs-attr">clearOffset</span>: <span class="hljs-number">0.3</span></span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-attr">essayTopAnimationRendered</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// true || false ,是否渲染随笔页头图动效</span></span><br><span class="language-javascript">        <span class="hljs-attr">essayTopAnimation</span>: &#123; <span class="hljs-comment">// 随笔页头图动效设置</span></span><br><span class="language-javascript">            triW : <span class="hljs-number">14</span>,</span><br><span class="language-javascript">            triH : <span class="hljs-number">20</span>,</span><br><span class="language-javascript">            neighbours : [<span class="hljs-string">&quot;side&quot;</span>, <span class="hljs-string">&quot;top&quot;</span>, <span class="hljs-string">&quot;bottom&quot;</span>],</span><br><span class="language-javascript">            speedTrailAppear : <span class="hljs-number">.1</span>,</span><br><span class="language-javascript">            speedTrailDisappear : <span class="hljs-number">.1</span>,</span><br><span class="language-javascript">            speedTriOpen : <span class="hljs-number">1</span>,</span><br><span class="language-javascript">            trailMaxLength : <span class="hljs-number">30</span>,</span><br><span class="language-javascript">            trailIntervalCreation : <span class="hljs-number">100</span>,</span><br><span class="language-javascript">            delayBeforeDisappear : <span class="hljs-number">2</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">colors</span>: [</span><br><span class="language-javascript">                <span class="hljs-string">&#x27;#96EDA6&#x27;</span>, <span class="hljs-string">&#x27;#5BC6A9&#x27;</span>,</span><br><span class="language-javascript">                <span class="hljs-string">&#x27;#38668C&#x27;</span>, <span class="hljs-string">&#x27;#374D84&#x27;</span>,</span><br><span class="language-javascript">                <span class="hljs-string">&#x27;#BED5CB&#x27;</span>, <span class="hljs-string">&#x27;#62ADC6&#x27;</span>,</span><br><span class="language-javascript">                <span class="hljs-string">&#x27;#8EE5DE&#x27;</span>, <span class="hljs-string">&#x27;#304E7B&#x27;</span></span><br><span class="language-javascript">            ]</span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-attr">bgAnimationRendered</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// true || false ,是否渲染背景动效</span></span><br><span class="language-javascript">        backgroundAnimation : &#123; <span class="hljs-comment">// 背景动效设置</span></span><br><span class="language-javascript">            <span class="hljs-attr">colorSaturation</span>: <span class="hljs-string">&quot;60%&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">colorBrightness</span>: <span class="hljs-string">&quot;50%&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">colorAlpha</span>: <span class="hljs-number">0.5</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">colorCycleSpeed</span>: <span class="hljs-number">5</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">verticalPosition</span>: <span class="hljs-string">&quot;random&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">horizontalSpeed</span>: <span class="hljs-number">200</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">ribbonCount</span>: <span class="hljs-number">3</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">strokeSize</span>: <span class="hljs-number">0</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">parallaxAmount</span>: -<span class="hljs-number">0.2</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">animateSections</span>: <span class="hljs-literal">true</span></span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 主页配置 ----</span></span><br><span class="language-javascript">        homeTopImg    : [ </span><br><span class="language-javascript">             <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-j55w9p_1920x1080.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-dgzkw3_1920x1080.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/home_top_bg.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-x1wroo.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-13gom9.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-vg7lv3.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-odej2m.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-j5mz95.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/19059-wallhaven-3911w9.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-6k3oox.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/for.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-737jo3.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/42476-wallhaven-oxzk8m.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-oxdyvl.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/44817-wallhaven-p8rdq9.webp&quot;</span></span><br><span class="language-javascript">        ],</span><br><span class="language-javascript">        <span class="hljs-attr">homeBannerText</span>: <span class="hljs-string">&quot;&quot;</span>, </span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 随笔页配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">essayTopImg</span>: [ </span><br><span class="language-javascript">               <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-13gom9.webp&quot;</span></span><br><span class="language-javascript">        ],</span><br><span class="language-javascript">        <span class="hljs-attr">essayCodeHighlightingType</span>: <span class="hljs-string">&#x27;highlightjs&#x27;</span>, <span class="hljs-comment">// 代码主题插件类型：cnblogs || highlightjs || prettify</span></span><br><span class="language-javascript">        <span class="hljs-attr">essayCodeHighlighting</span>: <span class="hljs-string">&#x27;monokai-sublime&#x27;</span>, <span class="hljs-comment">// 代码高亮主题，具体主题参考文档</span></span><br><span class="language-javascript">        <span class="hljs-attr">essaySuffix</span>:&#123; <span class="hljs-comment">// 随笔后缀处配置</span></span><br><span class="language-javascript">            aboutHtml    : <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-comment">// 关于博主，不配置使用默认</span></span><br><span class="language-javascript">            <span class="hljs-attr">copyrightHtml</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-comment">// 版权声明，不配置使用默认</span></span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 页脚配置 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">bottomBlogroll</span>: [ <span class="hljs-comment">// 友情链接，[[链接名,链接]....]</span></span><br><span class="language-javascript">            [<span class="hljs-string">&quot;王洋&quot;</span>, <span class="hljs-string">&#x27;http://www.wangyangyang.vip&#x27;</span>],</span><br><span class="language-javascript">            [<span class="hljs-string">&quot;申请坑位&quot;</span>, <span class="hljs-string">&#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;</span>],</span><br><span class="language-javascript">            [<span class="hljs-string">&quot;申请坑位&quot;</span>, <span class="hljs-string">&#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;</span>],</span><br><span class="language-javascript">            [<span class="hljs-string">&quot;申请坑位&quot;</span>, <span class="hljs-string">&#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;</span>],</span><br><span class="language-javascript">            [<span class="hljs-string">&quot;申请坑位&quot;</span>, <span class="hljs-string">&#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;</span>],</span><br><span class="language-javascript">        ],</span><br><span class="language-javascript">        <span class="hljs-attr">bottomText</span>: &#123;  <span class="hljs-comment">// 页脚标语</span></span><br><span class="language-javascript">            <span class="hljs-attr">icon</span>: <span class="hljs-string">&quot;❤️&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">left</span>: <span class="hljs-string">&quot;学无止境&quot;</span>,</span><br><span class="language-javascript">            <span class="hljs-attr">right</span>: <span class="hljs-string">&quot;谦卑而行&quot;</span></span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// ---- 控制台输出 ----</span></span><br><span class="language-javascript">        <span class="hljs-attr">consoleList</span>: [</span><br><span class="language-javascript">        [<span class="hljs-string">&#x27;wangyang0210 CNBlogs&#x27;</span>, <span class="hljs-string">&#x27;https://www.cnblogs.com/wangyang0210&#x27;</span>],</span><br><span class="language-javascript">        [<span class="hljs-string">&#x27;wangyang0210 GitHub&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/wangyang0210&#x27;</span>],</span><br><span class="language-javascript">        [<span class="hljs-string">&#x27;wangyang0210 Email&#x27;</span>, <span class="hljs-string">&#x27;2752154874@qq.com&#x27;</span>]</span><br><span class="language-javascript">        ],</span><br><span class="language-javascript">    &#125;;</span><br><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">// start cache</span></span><br><span class="language-javascript">    $.<span class="hljs-title function_">ajaxSetup</span>(&#123;<span class="hljs-attr">cache</span>: <span class="hljs-literal">true</span>&#125;);</span><br><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">// load loadingJs</span></span><br><span class="language-javascript">    $.<span class="hljs-title function_">getScript</span>(<span class="hljs-title function_">getJsDelivrUrl</span>(<span class="hljs-string">&#x27;loading.js&#x27;</span>), <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-comment">// Loading start</span></span><br><span class="language-javascript">        pageLoading.<span class="hljs-title function_">initRebound</span>();</span><br><span class="language-javascript">        pageLoading.<span class="hljs-title function_">initSpinner</span>();</span><br><span class="language-javascript">        pageLoading.<span class="hljs-property">spinner</span>.<span class="hljs-title function_">init</span>(pageLoading.<span class="hljs-property">spring</span>, <span class="hljs-literal">true</span>);</span><br><span class="language-javascript">        $.<span class="hljs-title function_">getScript</span>(<span class="hljs-title function_">getJsDelivrUrl</span>(<span class="hljs-string">&#x27;jquery.mCustomScrollbar.min.js&#x27;</span>), <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            $.<span class="hljs-title function_">getScript</span>(<span class="hljs-title function_">getJsDelivrUrl</span>(<span class="hljs-string">&#x27;require.min.js&#x27;</span>), <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">                $.<span class="hljs-title function_">getScript</span>(<span class="hljs-title function_">getJsDelivrUrl</span>(<span class="hljs-string">&#x27;config.js&#x27;</span>), <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">                    <span class="hljs-keyword">var</span> staticResource = [</span><br><span class="language-javascript">                        <span class="hljs-string">&#x27;optiscroll&#x27;</span>, <span class="hljs-string">&#x27;ToProgress&#x27;</span>, <span class="hljs-string">&#x27;rotate&#x27;</span>,</span><br><span class="language-javascript">                        <span class="hljs-string">&#x27;snapSvg&#x27;</span>, <span class="hljs-string">&#x27;classie&#x27;</span>, <span class="hljs-string">&#x27;main4&#x27;</span>, <span class="hljs-string">&#x27;tools&#x27;</span>];</span><br><span class="language-javascript">                    <span class="hljs-built_in">require</span>(staticResource, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">                        <span class="hljs-built_in">require</span>([<span class="hljs-string">&#x27;base&#x27;</span>], <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">                            (<span class="hljs-keyword">new</span> <span class="hljs-title class_">Base</span>).<span class="hljs-title function_">init</span>();</span><br><span class="language-javascript">                        &#125;);</span><br><span class="language-javascript">                    &#125;);</span><br><span class="language-javascript">                &#125;);</span><br><span class="language-javascript">            &#125;);</span><br><span class="language-javascript">        &#125;);</span><br><span class="language-javascript">    &#125;);</span><br><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">// get file url</span></span><br><span class="language-javascript">    <span class="hljs-keyword">function</span> <span class="hljs-title function_">getJsDelivrUrl</span>(<span class="hljs-params">file, directory</span>) &#123;</span><br><span class="language-javascript">        file = <span class="hljs-title function_">setFileNameMin</span>(file, directory);</span><br><span class="language-javascript">        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;https://cdn.jsdelivr.net/gh/&#x27;</span>+(<span class="hljs-variable language_">window</span>.<span class="hljs-property">cnblogsConfig</span>.<span class="hljs-property">GhUserName</span>)+<span class="hljs-string">&#x27;/&#x27;</span>+(<span class="hljs-variable language_">window</span>.<span class="hljs-property">cnblogsConfig</span>.<span class="hljs-property">GhRepositories</span>)+<span class="hljs-string">&#x27;@&#x27;</span>+(<span class="hljs-variable language_">window</span>.<span class="hljs-property">cnblogsConfig</span>.<span class="hljs-property">GhVersions</span>)+<span class="hljs-string">&#x27;/static/&#x27;</span> + (file ? file : <span class="hljs-string">&#x27;&#x27;</span>);</span><br><span class="language-javascript">    &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">// optimization file name</span></span><br><span class="language-javascript">    <span class="hljs-keyword">function</span> <span class="hljs-title function_">setFileNameMin</span>(<span class="hljs-params">file, directory</span>) &#123;</span><br><span class="language-javascript">        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> file == <span class="hljs-string">&#x27;undefined&#x27;</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#x27;</span>;</span><br><span class="language-javascript">        <span class="hljs-keyword">var</span> suffix  = <span class="hljs-literal">null</span>,fileArr = file.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;.&#x27;</span>);</span><br><span class="language-javascript">        <span class="hljs-keyword">if</span> (fileArr.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span> &amp;&amp; $.<span class="hljs-title function_">inArray</span>(fileArr[(fileArr.<span class="hljs-property">length</span> -<span class="hljs-number">1</span>)], [<span class="hljs-string">&#x27;js&#x27;</span>, <span class="hljs-string">&#x27;css&#x27;</span>]) != -<span class="hljs-number">1</span>)</span><br><span class="language-javascript">            &#123;suffix    = fileArr.<span class="hljs-title function_">pop</span>(); directory = suffix;&#125;</span><br><span class="language-javascript">        file.<span class="hljs-title function_">search</span>(<span class="hljs-string">&#x27;.min&#x27;</span>) == -<span class="hljs-number">1</span> &amp;&amp; fileArr.<span class="hljs-title function_">push</span>(<span class="hljs-string">&#x27;min&#x27;</span>);</span><br><span class="language-javascript">        suffix != <span class="hljs-literal">null</span> &amp;&amp; fileArr.<span class="hljs-title function_">push</span>(suffix);</span><br><span class="language-javascript">        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">typeof</span> directory !== <span class="hljs-string">&#x27;undefined&#x27;</span> ? (directory + <span class="hljs-string">&#x27;/&#x27;</span> + fileArr.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;.&#x27;</span>)) : (fileArr.<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;.&#x27;</span>)));</span><br><span class="language-javascript">    &#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
+<h2 id="如何简单地修改"><a href="#如何简单地修改" class="headerlink" title="如何简单地修改"></a>如何简单地修改</h2><p>这里将分块解释具体模块的含义，将从全局配置的代码和源文件两方面进行</p>
+<h3 id="全局配置部分"><a href="#全局配置部分" class="headerlink" title="全局配置部分"></a>全局配置部分</h3><p>（此部分代码没有留全，仅展示说明用）<br>这里是github文件源配置，建议fork GitHub上面的原仓库，然后将这三个量修改成自己的信息，因为或许你以后要自己研究魔改，这样会方便很多。</p>
+<h4 id="GitHub文件源配置"><a href="#GitHub文件源配置" class="headerlink" title="GitHub文件源配置"></a>GitHub文件源配置</h4><p><strong>GhUserName</strong>：GitHub用户名，<br><strong>GhRepositories</strong>：你fork的仓库名，<br><strong>GhVersions</strong>：你使用发布的版本号，可以和源文件一样用哈希，也可以使用‘v1.0.0’之类的。</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- GitHub文件源配置 ----<br>GhUserName: &#x27;wangyang0210&#x27;, <br>GhRepositories: &#x27;EasyBe&#x27;, <br>GhVersions : &#x27;80e8d7f9b7acb7ab1318ac39cbfad7b0ed908edd&#x27;, <br></code></pre></div></td></tr></table></figure>
+<h4 id="基础信息配置"><a href="#基础信息配置" class="headerlink" title="基础信息配置"></a>基础信息配置</h4><p><strong>blogUser</strong>：用户名，将显示在首页大封面的正中央<br><strong>blogAvatar</strong>：头像<br><strong>blogStartDate</strong>：博客建立的时间，将影响页脚处博客运行时间的显示</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- 基础信息配置 ----custom<br>blogUser      : &quot;。思索&quot;,<br>blogAvatar    : <br>&quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp&quot;,<br>blogStartDate : &quot;2019-8-1&quot;, <br></code></pre></div></td></tr></table></figure>
+<h4 id="网站标签栏配置"><a href="#网站标签栏配置" class="headerlink" title="网站标签栏配置"></a>网站标签栏配置</h4><p><strong>webpageTitleOnblur</strong>：你离开博客页面后显示在标签栏上的文字<br><strong>webpageTitleFocus</strong>：你离开后回到博客页面显示的文字<br><strong>webpageTitleOnblurTimeOut</strong>、<strong>webpageTitleFocusTimeOut</strong>不用修改，表示文字失效时间<br><strong>webpageIcon</strong>：你的网站图标，就是显示在浏览器标签栏里的那个<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb4.jpg" srcset="/img/loading.gif" lazyload alt="左侧的是网站图标" title="左侧的是网站图标"></p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- 网站配置 ----<br> webpageTitleOnblur        : &quot;(◍´꒳`◍) Hi, MyFriend&quot;, <br> webpageTitleOnblurTimeOut : 500, <br> webpageTitleFocus         : &quot;(*´∇｀*) 欢迎回来！&quot;, <br> webpageTitleFocusTimeOut  : 1000, <br> webpageIcon : &quot;https://files.cnblogs.com/files/wangyang0210/blog_logo.gif&quot;, <br></code></pre></div></td></tr></table></figure>
+<h4 id="进度条（未做更改）"><a href="#进度条（未做更改）" class="headerlink" title="进度条（未做更改）"></a>进度条（未做更改）</h4><p>进度条无需变动，用原配置即可<br>其中<strong>duration</strong>的单位是s,是页面滑动后进度条移动到相应位置的时间,比如页面从0滑动到50%,进度条花0.2s从0到达50%</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- 进度条配置 ----<br>progressBar: &#123;<br>    id      : &#x27;top-progress-bar&#x27;,<br>    color   : &#x27;#77b6ff&#x27;,<br>    height  : &#x27;2px&#x27;,<br>    duration: 0.2<br>&#125;,<br></code></pre></div></td></tr></table></figure>
+<h4 id="Loading动画配置-✿◕‿◕✿"><a href="#Loading动画配置-✿◕‿◕✿" class="headerlink" title="Loading动画配置(✿◕‿◕✿)"></a>Loading动画配置(✿◕‿◕✿)</h4><p>这个超有意思的，<br>我们使用原配置打开博客，应该能看到经典的三层三角形旋转的加载动画，这里的配置可以自行修改这个loading动画~<br><strong>rebound</strong>：这里修改的是旋转、回弹的速度<br><strong>radius</strong>：这个是旋转的图案的大小<br><strong>sides</strong>：这个是图案的边数，三角形就是3<br><strong>depth</strong>：这个是图案的深度，简单来说就是内嵌几个多边形<br><strong>background</strong>：整个大页面的背景颜色<br><strong>stroke</strong>：旋转图案的边的颜色，就是轮廓线条的颜色<br><strong>base</strong>：没出现旋转图案的时候的原位置的颜色，就是这个图案是在啥颜色上方旋转的<br><strong>child</strong>：旋转图案内填充的颜色<br><strong>alwaysForward</strong>：ture就是一直一个方向转，false的话会加一点回旋的效果，<br><strong>restAt</strong>：旋转的程度，旋转的角度的量化，数值越小，转的角度越小<br><strong>renderBase</strong>：如果设置了base的颜色，就把这个设为true即可<br>loading的<strong>原配置</strong>：</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- Loading配置 ----<br>loading: &#123;<br>    rebound: &#123;<br>        tension: 16,<br>        friction: 5<br>    &#125;,<br>    spinner: &#123;<br>        id: &#x27;spinner&#x27;,<br>        radius: 90,<br>        sides: 3,<br>        depth: 4,<br>        colors: &#123;<br>            background: &#x27;#f0f0f0&#x27;,<br>            stroke: &#x27;#272633&#x27;,<br>            base: null,<br>            child: &#x27;#272633&#x27;<br>        &#125;,<br>        alwaysForward: true, // When false the spring will reverse normally.<br>        restAt: 0.5,         // A number from 0.1 to 0.9 || null for full rotation<br>        renderBase: false<br>    &#125;<br>&#125;,<br></code></pre></div></td></tr></table></figure>
+<p>再放一个<strong>我配置的一个loading</strong>，黑色背景，六边形仅边框：</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">loading: &#123;<br>    rebound: &#123;<br>        tension: 46,<br>        friction: 3<br>    &#125;,<br>    spinner: &#123;<br>        id: &#x27;spinner&#x27;,<br>        radius: 120,<br>        sides: 6,<br>        depth: 6,<br>        colors: &#123;<br>            background: &#x27;#181818&#x27;,<br>            stroke: &#x27;#F4CA0C&#x27;,<br>            base: &#x27;#181818&#x27;,<br>            child: &#x27;#181818&#x27;<br>        &#125;,<br>        alwaysForward: false, // When false the spring will reverse normally.<br>        restAt: 0.2,         // A number from 0.1 to 0.9 || null for full rotation<br>        renderBase: true<br>    &#125;<br>&#125;,<br></code></pre></div></td></tr></table></figure>
+<h4 id="主页封图"><a href="#主页封图" class="headerlink" title="主页封图"></a>主页封图</h4><p>页面动效配置我没有更改，因为原动效已经超级好看了</p>
+<p><strong>homeTopImg</strong>是主页封面大图的配置，里面填充自己想放的图片，会随机显示，<br>貌似<strong>homeBannerTextType</strong>能设置一言标语，尚未成功…</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- 主页配置 ----<br>homeTopImg    : [ <br>     &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-j55w9p_1920x1080.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-dgzkw3_1920x1080.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/home_top_bg.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-x1wroo.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-13gom9.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-vg7lv3.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-odej2m.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-j5mz95.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/19059-wallhaven-3911w9.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-6k3oox.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/for.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-737jo3.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/42476-wallhaven-oxzk8m.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-oxdyvl.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/44817-wallhaven-p8rdq9.webp&quot;<br>],<br>homeBannerText: &quot;&quot;, <br></code></pre></div></td></tr></table></figure>
+<h4 id="随笔页-amp-页脚"><a href="#随笔页-amp-页脚" class="headerlink" title="随笔页&amp;页脚"></a>随笔页&amp;页脚</h4><p><strong>essayTopImg</strong>可以设置随笔页封图，填写多个会随机显示，<br><strong>essayCodeHighlightingType</strong>、<strong>essayCodeHighlighting</strong>无需更改，原主题就很不错了，不过你也可以根据cnblog的进行修改<br><strong>aboutHtml</strong>、<strong>copyrightHtml</strong>：出现文章末尾<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb5.jpg" srcset="/img/loading.gif" lazyload alt="评论上方" title="评论上方"></p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- 随笔页配置 ----<br>essayTopImg: [ <br>       &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/nothome_top_bg.webp&quot;,<br>    &quot;https://cdn.jsdelivr.net/gh/wangyang0210/Cnblogs-Theme@theme-simpleMemory/img/webp/wallhaven-13gom9.webp&quot;<br>],<br>essayCodeHighlightingType: &#x27;highlightjs&#x27;, // 代码主题插件类型：cnblogs || highlightjs || prettify<br>essayCodeHighlighting: &#x27;monokai-sublime&#x27;, // 代码高亮主题，具体主题参考文档<br>essaySuffix:&#123; // 随笔后缀处配置<br>    aboutHtml    : &#x27;&#x27;, // 关于博主，不配置使用默认<br>    copyrightHtml: &#x27;&#x27;, // 版权声明，不配置使用默认<br>&#125;,<br></code></pre></div></td></tr></table></figure>
+<p>这是页脚配置，看注释就显而易见了。</p>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html">// ---- 页脚配置 ----<br>bottomBlogroll: [ // 友情链接，[[链接名,链接]....]<br>    [&quot;王洋&quot;, &#x27;http://www.wangyangyang.vip&#x27;],<br>    [&quot;申请坑位&quot;, &#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;],<br>    [&quot;申请坑位&quot;, &#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;],<br>    [&quot;申请坑位&quot;, &#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;],<br>    [&quot;申请坑位&quot;, &#x27;https://msg.cnblogs.com/send/wangyang0210&#x27;],<br>],<br>bottomText: &#123;  // 页脚标语<br>    icon: &quot;❤️&quot;,<br>    left: &quot;学无止境&quot;,<br>    right: &quot;谦卑而行&quot;<br>&#125;,<br></code></pre></div></td></tr></table></figure>
+<p>全局配置部分此后内容属于控制台调用输出等配置，尽量不要去更动</p>
+<h3 id="源文件更改"><a href="#源文件更改" class="headerlink" title="源文件更改"></a>源文件更改</h3><p>这里做出的修改都在<strong>外观-&gt;编辑当前外观</strong>下进行~</p>
+<h4 id="左下角歌单修改"><a href="#左下角歌单修改" class="headerlink" title="左下角歌单修改"></a>左下角歌单修改</h4><p>试了一下，这个左下角的播放器内的歌单应该是网易云音乐的，<br>如果不满意那里设定的歌单的话，或者想要DIY整个自己的，可以去<strong>footer.php</strong>修改你中意的歌单id，如下图↓<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb6.jpg" srcset="/img/loading.gif" lazyload alt="歌单id修改" title="歌单id修改"><br>如果不知道歌单id在哪里的话，直接点开你要的歌单的<strong>网页</strong>，下图中画红线的部分就是你要找的歌单id.<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb7.jpg" srcset="/img/loading.gif" lazyload alt="找歌单id" title="找歌单id"></p>
+<h4 id="脑壳疼"><a href="#脑壳疼" class="headerlink" title="脑壳疼"></a>脑壳疼</h4><p>随笔页的最后都摆了3个“脑壳疼”的链接，如果你试着点击，就会发现实际上这里啥也没有(&#x2F;▽＼)<br>如果你对这里想放啥，有了成熟的想法，你可以尝试去修改<strong>post.php</strong>文件，<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb8.jpg" srcset="/img/loading.gif" lazyload alt="脑壳疼修改" title="脑壳疼修改"><br>具体方法已给出（就是我也实在没啥好的想法，只是看了一下该怎么改，没有尝试，不保证此方法的正确性）(￣▽￣)”<br>####侧边栏链接修改<br>这个主题的侧边栏还是很好看的，就是如果我们想DIY这里（↓）的链接的话，还是得去主题文件里改<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb9.jpg" srcset="/img/loading.gif" lazyload alt="侧边栏链接展示" title="侧边栏链接展示"></p>
+<p>主要的代码在<strong>sidebar.php</strong>文件里，<br>其中<strong>首页</strong>、<strong>管理</strong>、<strong>添加随笔</strong>这三个如果不了解尽量不用去动（也没必要）<br><strong>联系</strong>的链接是用于拉起无需好友验证的<em>QQ会话</em>，如需修改，首先要将<strong>“UIN&#x3D;”</strong>字符后面的QQ号改成自己的（如果你的QQ在线状态服务已开启，就不用后面的动作了），<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb10.jpg" srcset="/img/loading.gif" lazyload alt="侧边栏链接修改位置" title="侧边栏链接修改位置"></p>
+<p>然后去这个官网链接（<a target="_blank" rel="noopener" href="http://shang.qq.com/v3/index.html%EF%BC%89">http://shang.qq.com/v3/index.html）</a> ，点击最上方的推广工具，再点击左侧的设置.<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb11.jpg" srcset="/img/loading.gif" lazyload alt="QQ会话服务开启" title="QQ会话服务开启"></p>
+<p>找到会话能力，单击保存即可.<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb12.jpg" srcset="/img/loading.gif" lazyload alt="QQ会话服务开启" title="QQ会话服务开启"></p>
+<p>这样联系点开的就是和你的QQ会话了（注意必须是手机，其次如果你测试的时候，QQ登的是你的号，那是拉不出这个会话的）</p>
+<p>余下的链接修改就简单了，前两张的图里，红色方框改的是显示的文字，蓝色框里改的是对应的链接</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是EasyBe主题的配置修改的全部内容，当然这只是最粗浅的改动，我最满意的地方还是DIY的那个loading动画(oﾟvﾟ)ノ.<br>后续如有改进，我还会继续填充.</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/web%E6%9C%8D%E5%8A%A1%E5%99%A8/">web服务器</a>
+                    
+                      <a class="hover-with-bg" href="/categories/web%E6%9C%8D%E5%8A%A1%E5%99%A8/Typecho/">Typecho</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/">web服务器</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Typecho/">Typecho</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/14/Typecho%E5%AE%89%E8%A3%85%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+                        <span class="hidden-mobile">Typecho安装、基本配置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","appKey":"UtqevxNsaLBA4HlRcwUtwIYS","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     &copy; 2022 <a target="_blank" rel="noopener" href="https://www.sycamore.top"><strong>Sycamore</strong></a><br /> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>     
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
