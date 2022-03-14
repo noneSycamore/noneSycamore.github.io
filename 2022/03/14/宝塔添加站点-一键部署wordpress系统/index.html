@@ -1,0 +1,595 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Sycamore">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="记得这篇文章前后两部分需要分开看，宝塔添加站点（自由安装博客系统）+一键部署WordPress,（依旧是小白向）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="宝塔添加站点+一键部署WordPress系统">
+<meta property="og:url" content="https://blog.sycamore.top/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="Sycamoreの振り回す記録">
+<meta property="og:description" content="记得这篇文章前后两部分需要分开看，宝塔添加站点（自由安装博客系统）+一键部署WordPress,（依旧是小白向）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/1.jpg">
+<meta property="article:published_time" content="2022-03-14T11:51:27.000Z">
+<meta property="article:modified_time" content="2022-03-14T12:49:28.943Z">
+<meta property="article:author" content="Sycamore">
+<meta property="article:tag" content="web服务器">
+<meta property="article:tag" content="WordPress">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/1.jpg">
+  
+  
+  <title>宝塔添加站点+一键部署WordPress系统 - Sycamoreの振り回す記録</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.sycamore.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","app_key":"UtqevxNsaLBA4HlRcwUtwIYS","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sycamore&#39; Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/postpage.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="宝塔添加站点+一键部署WordPress系统">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Sycamore
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-14 19:51" pubdate>
+        2022年3月14日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">宝塔添加站点+一键部署WordPress系统</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：1 小时前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>记得这篇文章前后两部分需要分开看，<br>宝塔添加站点（自由安装博客系统）+一键部署WordPress,<br>（依旧是小白向）</p>
+<span id="more"></span>
+<h2 id="哔哔"><a href="#哔哔" class="headerlink" title="哔哔~"></a>哔哔~</h2><p>宝塔面板真的非常方便啊 d(*￣▽￣)&#x3D;&#x3D;b</p>
+<p>功能也很全面，安了宝塔都不用安其他的东西了，像Xshell之类的功能宝塔上面都有，我都直接一个宝塔解决了</p>
+<p>还有图片啥的，都尽量配全了o_o ….</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一台安装好了宝塔面板的服务器，一个正确解析的域名</p>
+<p>还有就是，<strong>这篇文章要分两部分来看（之前的小失误）</strong>，</p>
+<ol>
+<li>如果你想直接看如何<strong>一键部署wordpress</strong>的话，直接去第二部分吧，因为一键部署wordpress会<strong>顺带帮你添加站点</strong>。</li>
+<li>如果你想知道如何<strong>添加站点</strong>，然后后续装啥系统<strong>再说</strong>，就看看第一部分（当然你也可以装wordpress)</li>
+</ol>
+<h2 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h2><p>按照配图的步骤来就可：</p>
+<p>1.左侧栏点击网站 -&gt; 添加站点<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908105739.png" srcset="/img/loading.gif" lazyload></p>
+<p>2.填写网站信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908110707.png" srcset="/img/loading.gif" lazyload></p>
+<p>配置基本可以按照这个来，不过<strong>FTP</strong>创建不创建都无所谓，看个人需求，<br>当然<strong>数据库</strong>一定是要有的！<br>输入域名后，下面自动生成备注和目录名，无需修改</p>
+<p>密码的话，使用自动生成的或者是自己的都无所谓，宝塔面板里可以<strong>随时查看、修改</strong>(只要你之前保存了宝塔的后台信息就可以)</p>
+<blockquote>
+<p>再之后的要做的，就是手动装博客系统了，无论是选择<strong>Wordpress</strong>还是<strong>Typecho</strong>，或者<strong>Emlog</strong>（这个真没装过）？<br>基本的都是：下载安装包 -&gt; 解压 -&gt; 访问域名填写信息</p>
+</blockquote>
+<blockquote>
+<p>剩下的都靠你了，下面说的是，抛开前面内容不提的，一键部署<strong>Wordpress</strong></p>
+</blockquote>
+<h2 id="一键部署wordpress"><a href="#一键部署wordpress" class="headerlink" title="一键部署wordpress"></a>一键部署wordpress</h2><h3 id="安装Wordpress包和数据库"><a href="#安装Wordpress包和数据库" class="headerlink" title="安装Wordpress包和数据库"></a>安装Wordpress包和数据库</h3><p>我们要做的事情很简单：<br>1.左侧栏软件商店 -&gt; 一键部署 -&gt; 找到<strong>Wordpress</strong> -&gt; 点击右面的一键部署<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw1.png" srcset="/img/loading.gif" lazyload></p>
+<p>2.然后，会出现如下方所示的一张表：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw2.png" srcset="/img/loading.gif" lazyload><br>填写准备好的域名的时候，下方的备注、根目录、数据库会自动填充。<br>点击提交</p>
+<blockquote>
+<p>如果你当真是跟着<strong>从第一步过来</strong>的话（也就是说你提前添加了，你准备的域名的网站），这里会报告如下错误：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw3.png" srcset="/img/loading.gif" lazyload><br>然后你得返回刚刚的地方，把添加好的<strong>网站、数据库、FTP</strong>删除<br>ㄟ( ▔, ▔ )ㄏ</p>
+</blockquote>
+<p>如果你成功了，你就会看到这个：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw4.png" srcset="/img/loading.gif" lazyload><br>这些信息需要你记录一下，后续有用</p>
+<h3 id="访问站点"><a href="#访问站点" class="headerlink" title="访问站点"></a>访问站点</h3><p>方便点，你可以直接点击上图所示的，下方那个绿色的链接访问，<br>如果你不小心手贱关掉了，直接访问你的<strong>域名</strong>就行了，不要慌。</p>
+<p>有的时候，会比较慢，要等很久（但一般不是出错），这跟服务器啥的都有关系，然后不出意外的话，你会看到这个：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw5.png" srcset="/img/loading.gif" lazyload><br>选择语言（友情提示：中文在最下面）<br>继续，然后，现在就开始！（这张图就不贴了吧，实在没啥可说的）</p>
+<p>再就是填写数据库信息，还记得前面成功部署的那张图吗？<br><strong>数据库名、用户、密码</strong>，前三项一一对应填入，后两项，emm…也无需更改<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw6.png" srcset="/img/loading.gif" lazyload><br>当然，若是你手贱没记住直接关上了前面那张图，这些信息在宝塔里面也能查到，<br>操作如下：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw7.png" srcset="/img/loading.gif" lazyload></p>
+<p>好了，填写好了之后，点击提交，再点击现在安装<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw8.png" srcset="/img/loading.gif" lazyload><br>现在，你就到了最后一步了，如下图：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw9.png" srcset="/img/loading.gif" lazyload><br><strong>注意</strong>：</p>
+<blockquote>
+<p>这里填写的<strong>用户名、密码以及邮箱</strong>，是你今后登录网站后台的信息，<br>除了<strong>站点标题</strong>一栏你可以先随便填一个，其余的内容还是要<strong>想好再写</strong>，因为后续更改比较困难，也比较<strong>麻烦</strong>，不想麻烦的，还是好好填吧</p>
+</blockquote>
+<p>至于，对搜索引擎的可见性，看个人吧，<br>这里wordpress<strong>大概</strong>是出于安全性考虑？ 才建议不勾，不过后面你在后台也能改</p>
+<p>最后，点击安装wordpress，等待一会就行啦，<br>之后你想进后台还是查看网站，都随意了，<br>剩下的就是<strong>自行探索</strong>wordpress系统了，安装一个<strong>好看的主题</strong>吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/web%E6%9C%8D%E5%8A%A1%E5%99%A8/">web服务器</a>
+                    
+                      <a class="hover-with-bg" href="/categories/web%E6%9C%8D%E5%8A%A1%E5%99%A8/WordPress/">WordPress</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/">web服务器</a>
+                    
+                      <a class="hover-with-bg" href="/tags/WordPress/">WordPress</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/14/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%EF%BC%88SSH%E9%93%BE%E6%8E%A5-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%9F%9F%E5%90%8D%EF%BC%89/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">云服务器建站的一些准备工作（SSH链接+云服务器+域名）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/14/LNMP%E7%9A%84%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/">
+                        <span class="hidden-mobile">LNMP的一键部署</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","appKey":"UtqevxNsaLBA4HlRcwUtwIYS","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     &copy; 2022 <a target="_blank" rel="noopener" href="https://www.sycamore.top"><strong>Sycamore</strong></a><br /> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>     
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

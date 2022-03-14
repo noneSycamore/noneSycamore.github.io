@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>云服务器建站的一些准备工作（SSH链接+云服务器+域名）</title>
+    <link href="/2022/03/14/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%EF%BC%88SSH%E9%93%BE%E6%8E%A5-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%9F%9F%E5%90%8D%EF%BC%89/"/>
+    <url>/2022/03/14/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%EF%BC%88SSH%E9%93%BE%E6%8E%A5-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%9F%9F%E5%90%8D%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<p>讲讲用云服务器建站前的一些准备工作（必备的工具推荐+要购置的东西）</p><span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言~"></a>前言~</h2><p>开始建站之前，你需要完成拥有以下设备或者工具：</p><ul><li>找个好用的SSH工具</li><li>买个服务器</li><li>买个域名</li></ul><h2 id="SSH工具"><a href="#SSH工具" class="headerlink" title="SSH工具"></a>SSH工具</h2><p>建站过程中，你需要访问远端的服务器，那么你就要用到SSH工具实现交互。<br>就搭建个人博客而言，一个合适的SSH工具最好应当满足两点要求：</p><ul><li>可以方便地远程控制服务器终端</li><li>能够传输文件到服务器</li></ul><h3 id="Putty"><a href="#Putty" class="headerlink" title="Putty"></a>Putty</h3><p><strong>Putty</strong>的设计是真的简单，可惜它不能实现传输文件，而且默认设置之类的功能，也不是非常友好，不太推荐。<br>不过如果对文件传输没太多要求的话，可以考虑。<br>但我属于是老颜狗了…Putty实在不符合我的审美 &lt;(＿　＿)&gt;</p><h3 id="Xshell"><a href="#Xshell" class="headerlink" title="Xshell"></a>Xshell</h3><p>推荐<strong>Xshell</strong>，它是Xmanager下的一个工具，用于远程控制服务器的终端。<br>推荐的原因主要是：<strong>Xshell</strong>的设计简洁，可以设置自动登录（所以你不用每次连接服务器都傻乎乎地输入一遍IP和账户密码），最重要地一点，在<strong>Xshell</strong>的工具栏里可以直接找到<strong>Xftp</strong>，进行文件传输，挺方便的<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/jz01.png"><br><strong>Xftp</strong>是一个文本传输工具，可以把文件传输到服务器上，或是从服务器上下载备份文件。</p><p><strong>ps: Xshell</strong>和<strong>Xftp</strong>的家庭版（以及学校版）可以免费申请下载，这个网上教程都有，非常适合我们使用。<br>尤其是它的颜值也不错 (￣_,￣ )</p><h3 id="宝塔面板"><a href="#宝塔面板" class="headerlink" title="宝塔面板"></a>宝塔面板</h3><p>可以给服务器安装宝塔面板，宝塔面板的 <strong>终端</strong> 选项可以实现控制终端的功能，<strong>文件</strong> 选项可以时间文件的传输，而且宝塔还集成了一些其他强大且方便的功能，推荐安装</p><p>具体的安装方法，可以参考我的，后半段有相关内容，也附有官网地址。</p><h2 id="云服务器（购）"><a href="#云服务器（购）" class="headerlink" title="云服务器（购）"></a>云服务器（购）</h2><p>这里以<strong>阿里云</strong>的云服务器为例~</p><blockquote><p>当然腾讯云之类的也是一样的，不过，你也可以试试网上那些免费服务器（讲真的，我怀疑是虚拟主机，毕竟性能啥的不敢恭维），就是尽量不要把钱给整进去了，如果你觉得值当，那当我没说。</p></blockquote><p>下面我会哔哔两句，关于优惠的事（因为实在是太 * 了），不想看的可以跳过</p><p>虽说，如果你<strong>不是新用户</strong>（就是在阿里云下买过产品），这云服务器还是比较贵的，<br>但是，如果你是<strong>新用户</strong>，不论是阿里云（以及腾讯云等）都会有相当丰厚的优惠，</p><p>比如原价一年<strong>1600</strong>（差不多），如果你是新用户，会降到一年<strong>100</strong>，根据不同时段的优惠力度不同，甚至还有一年<strong>40</strong>的。<br>说实话，我是一年100，买了3年，然后当我看到一年40的时候（这低的离谱了）。。。<br>::&gt;<em>&lt;::</em><br>（当然，我说的是基本一样的配置）</p><p>好了好了，下面就说说怎么买吧：</p><p>首先，你得买一个ECS云服务器，或者是轻量应用服务器，<br>地域的选择关系不大，系统镜像在购买之后也可以更换。</p><ul><li><strong>ECS服务器</strong>：从ECS建站会相对比较复杂，毕竟你买来的时候里面几乎就是空白的，基本所有的东西需要自行添入<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/jz02.png"></li><li><strong>轻量服务器</strong>：轻量服务器可以直接选择应用镜像，推荐选择<strong>BT-Panel</strong>，Wordpress镜像的话，没试过，但毕竟从宝塔面板也可以安装wordpress，而且其他功能也都集成得不错。<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/jz03.png"><br>一般来说，个人博客的话，轻量服务器就够用了，对新手也很友好<br>至于CPU、内存等的大小问题，根据财力自行决定吧</li></ul><p>不过，首次购买的优惠只有首次才有，可以<strong>考虑</strong>多买几年。</p><h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>在这里搜索你想要的域名名称，找一个适合你的后缀名<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/jz04.png"><br>（提一嘴，.top后缀，还有.xyz，都比较便宜~    (ง •_•)ง）</p><p>然后加入购物车，选择购买的年限<br>因为最开始都会有点优惠，可以考虑买的时间长一点（允许的话）</p><p>在支付之前，还得创建你的信息模版，邮箱验证通过了才可以购买</p><p><strong>ps1：</strong>记得填写信息模板下面的实名认证，对域名的实名认证的审核通过了，才好投入使用<br><strong>ps2：</strong>不要忘了去ICP备案哦（贴个<a href="https://blog.csdn.net/u014148630/article/details/100556108?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163431763116780366546901%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163431763116780366546901&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-100556108.first_rank_v2_pc_rank_v29&utm_term=ICP%E5%A4%87%E6%A1%88%E6%AD%A5%E9%AA%A4&spm=1018.2226.3001.4187" title="链接">链接</a>吧，不是太复杂，就是时间长，还有填改信息的操作比较繁琐）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>web服务器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web服务器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>宝塔添加站点+一键部署WordPress系统</title>
+    <link href="/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<p>记得这篇文章前后两部分需要分开看，<br>宝塔添加站点（自由安装博客系统）+一键部署WordPress,<br>（依旧是小白向）</p><span id="more"></span><h2 id="哔哔"><a href="#哔哔" class="headerlink" title="哔哔~"></a>哔哔~</h2><p>宝塔面板真的非常方便啊 d(*￣▽￣)&#x3D;&#x3D;b</p><p>功能也很全面，安了宝塔都不用安其他的东西了，像Xshell之类的功能宝塔上面都有，我都直接一个宝塔解决了</p><p>还有图片啥的，都尽量配全了o_o ….</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一台安装好了宝塔面板的服务器，一个正确解析的域名</p><p>还有就是，<strong>这篇文章要分两部分来看（之前的小失误）</strong>，</p><ol><li>如果你想直接看如何<strong>一键部署wordpress</strong>的话，直接去第二部分吧，因为一键部署wordpress会<strong>顺带帮你添加站点</strong>。</li><li>如果你想知道如何<strong>添加站点</strong>，然后后续装啥系统<strong>再说</strong>，就看看第一部分（当然你也可以装wordpress)</li></ol><h2 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h2><p>按照配图的步骤来就可：</p><p>1.左侧栏点击网站 -&gt; 添加站点<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908105739.png"></p><p>2.填写网站信息</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908110707.png"></p><p>配置基本可以按照这个来，不过<strong>FTP</strong>创建不创建都无所谓，看个人需求，<br>当然<strong>数据库</strong>一定是要有的！<br>输入域名后，下面自动生成备注和目录名，无需修改</p><p>密码的话，使用自动生成的或者是自己的都无所谓，宝塔面板里可以<strong>随时查看、修改</strong>(只要你之前保存了宝塔的后台信息就可以)</p><blockquote><p>再之后的要做的，就是手动装博客系统了，无论是选择<strong>Wordpress</strong>还是<strong>Typecho</strong>，或者<strong>Emlog</strong>（这个真没装过）？<br>基本的都是：下载安装包 -&gt; 解压 -&gt; 访问域名填写信息</p></blockquote><blockquote><p>剩下的都靠你了，下面说的是，抛开前面内容不提的，一键部署<strong>Wordpress</strong></p></blockquote><h2 id="一键部署wordpress"><a href="#一键部署wordpress" class="headerlink" title="一键部署wordpress"></a>一键部署wordpress</h2><h3 id="安装Wordpress包和数据库"><a href="#安装Wordpress包和数据库" class="headerlink" title="安装Wordpress包和数据库"></a>安装Wordpress包和数据库</h3><p>我们要做的事情很简单：<br>1.左侧栏软件商店 -&gt; 一键部署 -&gt; 找到<strong>Wordpress</strong> -&gt; 点击右面的一键部署<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw1.png"></p><p>2.然后，会出现如下方所示的一张表：</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw2.png"><br>填写准备好的域名的时候，下方的备注、根目录、数据库会自动填充。<br>点击提交</p><blockquote><p>如果你当真是跟着<strong>从第一步过来</strong>的话（也就是说你提前添加了，你准备的域名的网站），这里会报告如下错误：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw3.png"><br>然后你得返回刚刚的地方，把添加好的<strong>网站、数据库、FTP</strong>删除<br>ㄟ( ▔, ▔ )ㄏ</p></blockquote><p>如果你成功了，你就会看到这个：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw4.png"><br>这些信息需要你记录一下，后续有用</p><h3 id="访问站点"><a href="#访问站点" class="headerlink" title="访问站点"></a>访问站点</h3><p>方便点，你可以直接点击上图所示的，下方那个绿色的链接访问，<br>如果你不小心手贱关掉了，直接访问你的<strong>域名</strong>就行了，不要慌。</p><p>有的时候，会比较慢，要等很久（但一般不是出错），这跟服务器啥的都有关系，然后不出意外的话，你会看到这个：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw5.png"><br>选择语言（友情提示：中文在最下面）<br>继续，然后，现在就开始！（这张图就不贴了吧，实在没啥可说的）</p><p>再就是填写数据库信息，还记得前面成功部署的那张图吗？<br><strong>数据库名、用户、密码</strong>，前三项一一对应填入，后两项，emm…也无需更改<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw6.png"><br>当然，若是你手贱没记住直接关上了前面那张图，这些信息在宝塔里面也能查到，<br>操作如下：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw7.png"></p><p>好了，填写好了之后，点击提交，再点击现在安装<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw8.png"><br>现在，你就到了最后一步了，如下图：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/btw9.png"><br><strong>注意</strong>：</p><blockquote><p>这里填写的<strong>用户名、密码以及邮箱</strong>，是你今后登录网站后台的信息，<br>除了<strong>站点标题</strong>一栏你可以先随便填一个，其余的内容还是要<strong>想好再写</strong>，因为后续更改比较困难，也比较<strong>麻烦</strong>，不想麻烦的，还是好好填吧</p></blockquote><p>至于，对搜索引擎的可见性，看个人吧，<br>这里wordpress<strong>大概</strong>是出于安全性考虑？ 才建议不勾，不过后面你在后台也能改</p><p>最后，点击安装wordpress，等待一会就行啦，<br>之后你想进后台还是查看网站，都随意了，<br>剩下的就是<strong>自行探索</strong>wordpress系统了，安装一个<strong>好看的主题</strong>吧</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>web服务器</category>
+      
+      <category>WordPress</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web服务器</tag>
+      
+      <tag>WordPress</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LNMP的一键部署</title>
+    <link href="/2022/03/14/LNMP%E7%9A%84%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/"/>
+    <url>/2022/03/14/LNMP%E7%9A%84%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/</url>
+    
+    <content type="html"><![CDATA[<p><strong>详细教程</strong>：两种简单方法部署LNMP，包括宝塔面板的安装（小白向，不想麻烦的就进来看吧）</p><span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言~"></a>前言~</h2><p>提供服务器上部署lnmp的两个简单的方法，个人推荐第二种，宝塔面板实在是太香了！<br>顺便安上本人安装lnmp的选择<br>（emm…确实，我两个方法都安装过(°ー°〃)）</p><h2 id="方式一：使用官网lnmp一键安装包"><a href="#方式一：使用官网lnmp一键安装包" class="headerlink" title="方式一：使用官网lnmp一键安装包"></a>方式一：使用官网lnmp一键安装包</h2><p>贴上官网上的安装教程：<a href="https://lnmp.org/install.html">https://lnmp.org/install.html</a><br>有问题可以自行查询，大部分应该没啥问题，若是还有问题没解决就直接用宝塔吧~</p><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>先要装个远程命令窗口，推荐Xshell，还附带个文件传输的功能Xftp；putty也可以，小巧精简<br>选一个用就行了~<br>放个<a href="https://blog.csdn.net/qq_33173608/article/details/106757749" title="Xshell">Xshell</a>的安装教程…</p><h3 id="安装lnmp稳定版"><a href="#安装lnmp稳定版" class="headerlink" title="安装lnmp稳定版"></a>安装lnmp稳定版</h3><p>就是无人值守安装，无人值守安装是一个新增的功能，可以预设好相关参数自动进行安装，不需要按提示一个一个的选择，适合批量安装部署；<br>如果需要使用无人值守安装，请使用<a href="https://lnmp.org/auto.html" title="无人值守命令生成工具">无人值守命令生成工具</a>，或查看<a href="https://lnmp.org/faq/v1-5-auto-install.html" title="无人值守说明">无人值守说明</a>，获得无人值守安装的命令</p><h3 id="一般方法"><a href="#一般方法" class="headerlink" title="一般方法"></a>一般方法</h3><p>执行命令：<code>wget http://soft.vpser.net/lnmp/lnmp1.8.tar.gz -cO lnmp1.8.tar.gz &amp;&amp; tar zxf lnmp1.8.tar.gz &amp;&amp; cd lnmp1.8 &amp;&amp; ./install.sh lnmp</code></p><p>然后你会看到这个：</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-1.png"></p><p>让我们选择MySQL的版本，本人选择了4，<br>要注意的是：MySQL 5.6,5.7及MariaDB 10必须在1G以上内存的更高配置上才能选择</p><p>然后要我们输入数据库的密码：<img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-2.png"></p><p>如果你不小心输错了密码，你可以按住Ctrl再按Backspace键进行删除</p><p>再然后， 询问是否需要启用MySQL InnoDB：</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-3.png"></p><p>InnoDB引擎默认为开启，一般建议开启，直接回车或输入 y ，<br>如果确定确实不需要该引擎可以输入 n，(MySQL 5.7+版本无法关闭InnoDB),输入完成，回车进入下一步</p><p>让我们选择PHP版本：</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-4.png"></p><p>这里需要考虑到：选择PHP 7+版本时需要自行确认PHP版本是否与自己的程序兼容， 不过还是建议7+版本，至少目前wordpress网站已经不支持5.5以下的php版本安装了<br>所以我选了8 (。＾▽＾)</p><p>下一步选择是否安装内存优化</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-5.png"></p><p>回车不安装就可以了，想要安装的话就在2，3中选，Jemalloc或者TCMalloc，想要深入了解的可以戳<a href="https://www.cnblogs.com/cthon/p/10563946.html" title="这里">这里</a></p><p>再就等待它装好就可以了，时间要很久，大概半个小时左右吧，可以先做其他事情…<br>就像这样：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-success.png"></p><ul><li>显示Nginx: OK，MySQL: OK，PHP: OK，</li><li>并且Nginx、MySQL、PHP都是running，80和3306端口都存在，</li><li>提示了安装使用的时间且最后出现Install lnmp V1.6 completed! enjoy it.</li></ul><p>那就说明你安装成功了!<br>如果安装失败，问题不大，可以卸载lnmp后重新安装：<br>进入lnmp安装目录，输入.&#x2F;uninstall.sh回车即可 ，命令如下：<br><code>cd lnmp1.4</code><br><code>ls</code><br><code>./uninstall.sh</code><br>后续内容可以参考<a href="https://lnmp.org/faq/lnmp-vhost-add-howto.html">这里</a>，这篇博客就不再赘述了，毕竟是LNMP的安装教程，而且本人也没去尝试后续开虚拟主机的内容</p><h2 id="方式二：宝塔一键安装"><a href="#方式二：宝塔一键安装" class="headerlink" title="方式二：宝塔一键安装"></a>方式二：宝塔一键安装</h2><h3 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h3><h4 id="安装要求："><a href="#安装要求：" class="headerlink" title="安装要求："></a><strong>安装要求：</strong></h4><p>内存：512M以上，推荐768M以上（纯面板约占系统60M内存）<br>硬盘：300M以上可用硬盘空间（纯面板约占20M磁盘空间）<br>系统：CentOS 7.1+ (Ubuntu16.04+.、Debian9.0+)，确保是干净的操作系统，没有安装过其它环境带的Apache&#x2F;Nginx&#x2F;php&#x2F;MySQL&#x2F;pgsql&#x2F;gitlab&#x2F;java（已有环境不可安装）<br>架构：x86_64（主流服务器均是此架构），ARM不完整兼容（面板环境安装慢，部分软件可能安装不上）</p><p>系统兼容性顺序：Centos7.x &gt; Debian10 &gt; Ubuntu 20.04 &gt; Cenots8.x &gt; Ubuntu 18.04 &gt; 其它系统<br>（所以建议服务器采用Cento7.x版本的，反正租的都是一个价不是吗(ง •_•)ง）</p><h4 id="关于开端口的问题"><a href="#关于开端口的问题" class="headerlink" title="关于开端口的问题"></a>关于开端口的问题</h4><p>emm…宝塔面板需要服务器放行安全组，(ps: 这个很重要!)<br>就根据自己租的服务器点击下方链接，然后照做就行，操作简单的：<br>阿里、腾讯、华为<br>开好了就直接从下面选对应的安装就可以了</p><h4 id="Linux面板7-7-0安装命令："><a href="#Linux面板7-7-0安装命令：" class="headerlink" title="Linux面板7.7.0安装命令："></a><strong>Linux面板7.7.0安装命令：</strong></h4><p>Centos安装命令：<br><code>yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</code><br>试验性Centos&#x2F;Ubuntu&#x2F;Debian安装命令，独立运行环境（py3.7），可能存在少量兼容性问题<br><code>curl -sSO http://download.bt.cn/install/install_panel.sh &amp;&amp; bash install_panel.sh</code><br>Ubuntu&#x2F;Deepin安装命令：<br><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh</code><br>Debian安装命令：<br><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh</code><br>Fedora安装命令:<br><code>wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; bash install.sh</code><br>Linux面板7.7.0升级命令：curl <code>http://download.bt.cn/install/update6.sh|bash</code></p><h4 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功!"></a>安装成功!</h4><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908143811.png"></p><p>不要关！注意要保存这里圈出来的内容，这是宝塔后台地址和账号密码<br>我们可以复制到记事本保存一下…</p><h3 id="宝塔安装LNMP"><a href="#宝塔安装LNMP" class="headerlink" title="宝塔安装LNMP"></a>宝塔安装LNMP</h3><p>在浏览器上打开上面保存的地址，登入宝塔面板（输入你上面保存的账号密码），面板会自动推荐你安装环境套件，<br>这里有两种选择，第一种是LNMP套件，第二种是LAMP套件：</p><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/btlnmp.png"></p><p>在这里你可以选择LNMP的版本，php版本的问题之前已经提到过：<br>选择PHP 7+版本时需要自行确认PHP版本是否与自己的程序兼容，不过还是建议7+版本，至少目前wordpress网站已经不支持5.5以下的php版本安装了，不过这里给出的配置也没什么问题，后续也可以更新版本…</p><p>要注意的一点是，安装方式的选择：<br>为确保后期程序运行的稳定性，请选择编译安装！极速安装主要用体验和测试使用，正常情况下应当避免使用极速安装！</p><p>然后点击一键安装就行了，会自动跳入任务列表（没有的话就在左上角那里），界面上会显示程序的安装进度，时间大概十几分钟吧。列表上都显示安装成功就大功告成了！</p><h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><ul><li>宝塔面板当然你也可以选择安装LAMP，不过我之所以选择LNMP，因为nginx具有的特点是，并发能力强并且占用内存小，所以更推荐安装这个(&#x2F;▽＼)</li><li>之所以推荐宝塔面板来安装，因为宝塔对网站的后续建设也很方便，wordpress等建站系统也可以一键部署，还有Https设置，自动定期备份等，所以强推哦(ง •_•)ง</li><li>本文完成于2021&#x2F;9&#x2F;8，请核对时间，部分内容可能因为时间关系与实际不符！X﹏X</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>web服务器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>web服务器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
