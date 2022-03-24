@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/favicon.png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/LNMP%E7%9A%84%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/1.jpg">
 <meta property="article:published_time" content="2022-03-14T05:26:36.000Z">
-<meta property="article:modified_time" content="2022-03-15T04:58:29.544Z">
+<meta property="article:modified_time" content="2022-03-24T12:00:24.904Z">
 <meta property="article:author" content="Sycamore">
 <meta property="article:tag" content="云服务器">
 <meta name="twitter:card" content="summary_large_image">
@@ -71,7 +71,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.sycamore.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","app_key":"UtqevxNsaLBA4HlRcwUtwIYS","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.sycamore.top","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","app_key":"UtqevxNsaLBA4HlRcwUtwIYS","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -187,7 +187,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/postpage.png') no-repeat center center;
+         style="background: url('https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/LNMP%E7%9A%84%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/1.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -268,7 +268,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：9 天前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
@@ -281,20 +281,20 @@
 <h3 id="安装lnmp稳定版"><a href="#安装lnmp稳定版" class="headerlink" title="安装lnmp稳定版"></a>安装lnmp稳定版</h3><p>就是无人值守安装，无人值守安装是一个新增的功能，可以预设好相关参数自动进行安装，不需要按提示一个一个的选择，适合批量安装部署；<br>如果需要使用无人值守安装，请使用<a target="_blank" rel="noopener" href="https://lnmp.org/auto.html" title="无人值守命令生成工具">无人值守命令生成工具</a>，或查看<a target="_blank" rel="noopener" href="https://lnmp.org/faq/v1-5-auto-install.html" title="无人值守说明">无人值守说明</a>，获得无人值守安装的命令</p>
 <h3 id="一般方法"><a href="#一般方法" class="headerlink" title="一般方法"></a>一般方法</h3><p>执行命令：<code>wget http://soft.vpser.net/lnmp/lnmp1.8.tar.gz -cO lnmp1.8.tar.gz &amp;&amp; tar zxf lnmp1.8.tar.gz &amp;&amp; cd lnmp1.8 &amp;&amp; ./install.sh lnmp</code></p>
 <p>然后你会看到这个：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-1.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-1.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>让我们选择MySQL的版本，本人选择了4，<br>要注意的是：MySQL 5.6,5.7及MariaDB 10必须在1G以上内存的更高配置上才能选择</p>
-<p>然后要我们输入数据库的密码：<img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-2.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后要我们输入数据库的密码：<img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-2.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>如果你不小心输错了密码，你可以按住Ctrl再按Backspace键进行删除</p>
 <p>再然后， 询问是否需要启用MySQL InnoDB：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-3.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-3.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>InnoDB引擎默认为开启，一般建议开启，直接回车或输入 y ，<br>如果确定确实不需要该引擎可以输入 n，(MySQL 5.7+版本无法关闭InnoDB),输入完成，回车进入下一步</p>
 <p>让我们选择PHP版本：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-4.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-4.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>这里需要考虑到：选择PHP 7+版本时需要自行确认PHP版本是否与自己的程序兼容， 不过还是建议7+版本，至少目前wordpress网站已经不支持5.5以下的php版本安装了<br>所以我选了8 (。＾▽＾)</p>
 <p>下一步选择是否安装内存优化</p>
-<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-5.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-5.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>回车不安装就可以了，想要安装的话就在2，3中选，Jemalloc或者TCMalloc，想要深入了解的可以戳<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cthon/p/10563946.html" title="这里">这里</a></p>
-<p>再就等待它装好就可以了，时间要很久，大概半个小时左右吧，可以先做其他事情…<br>就像这样：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-success.png" srcset="/img/loading.gif" lazyload></p>
+<p>再就等待它装好就可以了，时间要很久，大概半个小时左右吧，可以先做其他事情…<br>就像这样：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/lnmp1.5-install-success.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <ul>
 <li>显示Nginx: OK，MySQL: OK，PHP: OK，</li>
 <li>并且Nginx、MySQL、PHP都是running，80和3306端口都存在，</li>
@@ -305,10 +305,10 @@
 <p>系统兼容性顺序：Centos7.x &gt; Debian10 &gt; Ubuntu 20.04 &gt; Cenots8.x &gt; Ubuntu 18.04 &gt; 其它系统<br>（所以建议服务器采用Cento7.x版本的，反正租的都是一个价不是吗(ง •_•)ง）</p>
 <h4 id="关于开端口的问题"><a href="#关于开端口的问题" class="headerlink" title="关于开端口的问题"></a>关于开端口的问题</h4><p>emm…宝塔面板需要服务器放行安全组，(ps: 这个很重要!)<br>就根据自己租的服务器点击下方链接，然后照做就行，操作简单的：<br>阿里、腾讯、华为<br>开好了就直接从下面选对应的安装就可以了</p>
 <h4 id="Linux面板7-7-0安装命令："><a href="#Linux面板7-7-0安装命令：" class="headerlink" title="Linux面板7.7.0安装命令："></a><strong>Linux面板7.7.0安装命令：</strong></h4><p>Centos安装命令：<br><code>yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</code><br>试验性Centos&#x2F;Ubuntu&#x2F;Debian安装命令，独立运行环境（py3.7），可能存在少量兼容性问题<br><code>curl -sSO http://download.bt.cn/install/install_panel.sh &amp;&amp; bash install_panel.sh</code><br>Ubuntu&#x2F;Deepin安装命令：<br><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh</code><br>Debian安装命令：<br><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh</code><br>Fedora安装命令:<br><code>wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; bash install.sh</code><br>Linux面板7.7.0升级命令：curl <code>http://download.bt.cn/install/update6.sh|bash</code></p>
-<h4 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功!"></a>安装成功!</h4><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908143811.png" srcset="/img/loading.gif" lazyload></p>
+<h4 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功!"></a>安装成功!</h4><p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/QQ%E6%88%AA%E5%9B%BE20210908143811.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>不要关！注意要保存这里圈出来的内容，这是宝塔后台地址和账号密码<br>我们可以复制到记事本保存一下…</p>
 <h3 id="宝塔安装LNMP"><a href="#宝塔安装LNMP" class="headerlink" title="宝塔安装LNMP"></a>宝塔安装LNMP</h3><p>在浏览器上打开上面保存的地址，登入宝塔面板（输入你上面保存的账号密码），面板会自动推荐你安装环境套件，<br>这里有两种选择，第一种是LNMP套件，第二种是LAMP套件：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/btlnmp.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/noneSycamore/whitzard_cdn/wp-content/uploads/2021/09/btlnmp.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <p>在这里你可以选择LNMP的版本，php版本的问题之前已经提到过：<br>选择PHP 7+版本时需要自行确认PHP版本是否与自己的程序兼容，不过还是建议7+版本，至少目前wordpress网站已经不支持5.5以下的php版本安装了，不过这里给出的配置也没什么问题，后续也可以更新版本…</p>
 <p>要注意的一点是，安装方式的选择：<br>为确保后期程序运行的稳定性，请选择编译安装！极速安装主要用体验和测试使用，正常情况下应当避免使用极速安装！</p>
 <p>然后点击一键安装就行了，会自动跳入任务列表（没有的话就在左上角那里），界面上会显示程序的安装进度，时间大概十几分钟吧。列表上都显示安装成功就大功告成了！</p>
