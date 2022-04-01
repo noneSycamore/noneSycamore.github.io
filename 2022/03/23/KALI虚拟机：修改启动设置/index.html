@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/23/KALI%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E8%AE%BE%E7%BD%AE/lazy.jpg">
 <meta property="article:published_time" content="2022-03-23T07:13:52.000Z">
-<meta property="article:modified_time" content="2022-03-24T11:59:30.253Z">
+<meta property="article:modified_time" content="2022-04-01T04:49:48.135Z">
 <meta property="article:author" content="Sycamore">
 <meta property="article:tag" content="虚拟机">
 <meta property="article:tag" content="Kali">
@@ -219,7 +219,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      1.1k 字
     </span>
   
 
@@ -228,7 +228,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9 分钟
+      10 分钟
     </span>
   
 
@@ -269,7 +269,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：9 分钟前
+                  本文最后更新于：1 分钟前
                 
               </p>
             
@@ -289,8 +289,9 @@
 <h2 id="跳过登录页面直接进"><a href="#跳过登录页面直接进" class="headerlink" title="跳过登录页面直接进"></a>跳过登录页面直接进</h2><p>因为总是需要重启 <strong>Kali</strong> 虚拟机，然后<strong>每次重启</strong>都要输一遍账号密码。。。<br>实在是太<strong>麻烦</strong>了，我就想着该怎么<strong>跳过登录页面</strong>，直接进（释放双手）</p>
 <ol>
 <li>打开 Termial，输入命令：<code>vim /etc/lightdm/lightdm.conf</code><br>编辑 <strong>lightdm.conf</strong> 文件（因为 <strong>Kali</strong> 的登录界面就是 <strong>LightDM</strong> 的）<br></li>
-<li>找到 <strong>[Seat:*]</strong> 这一行，在它的<strong>下方</strong>添加下面两行代码，或者<strong>取消</strong>这两行代码的<strong>注释</strong><br>（一定要是 <strong>Seat</strong>下面，因为它的<strong>前面</strong>有<strong>一样的</strong>，被注释的代码，别搞错了）<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login5.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>添加的代码：<br><code>autologin-user=root</code>（用 <strong>root</strong> 用户登录，如果你想用<strong>其他的用户</strong>，改成对应的就行）<br><code>autologin-user-timeout=0</code><br>如图所示：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login6.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br></li>
-<li>保存退出：<code>Esc</code>+<code>:wq</code>，然后重启查看效果：<code>reboot</code></li>
+<li>找到 <strong>[Seat:*]</strong> 这一行，在它的<strong>下方</strong>添加下面两行代码，或者<strong>取消</strong>这两行代码的<strong>注释</strong><br>（一定要是 <strong>Seat</strong>下面，因为它的<strong>前面</strong>有<strong>一样的</strong>，被注释的代码，别搞错了）<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login5.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>添加的代码：<br><code>autologin-user=root</code>（用 <strong>root</strong> 用户登录，如果你想用<strong>其他的用户</strong>，改成对应的就行）<br><code>autologin-user-timeout=0</code><br>如图所示：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login6.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>保存退出：<code>Esc</code>+<code>:wq</code><br></li>
+<li>修改pam相关的验证文件，输入命令：<code>vim /etc/pam.d/lightdm-autologin</code>，<br>注释掉<code>auth required pam_succeed_if.so user != root quiet_success</code>这一行，完成~<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login10.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br></li>
+<li>重启查看效果：<code>reboot</code></li>
 </ol>
 <h2 id="启动跳过5s引导界面"><a href="#启动跳过5s引导界面" class="headerlink" title="启动跳过5s引导界面"></a>启动跳过5s引导界面</h2><p>就是这个：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login8.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>改了 <strong>跳过登录页面</strong> 之后，感觉这个<strong>引导界面</strong>又有点<strong>多余</strong>了（反正要用的时候再改回来）<br>因为要等的话，要等 <strong>5s</strong> ，不想等的话，还得按个<strong>回车键</strong>跳过~<br>那我为了<strong>释放双手</strong>，自然得去掉这玩意</p>
 <ol>
