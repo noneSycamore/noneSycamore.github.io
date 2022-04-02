@@ -13,9 +13,7 @@
     
     <categories>
       
-      <category>虚拟机</category>
-      
-      <category>Kali</category>
+      <category>Kali-Linux</category>
       
     </categories>
     
@@ -42,9 +40,9 @@
     
     <categories>
       
-      <category>虚拟机</category>
+      <category>Kali-Linux</category>
       
-      <category>Kali</category>
+      <category>后门</category>
       
     </categories>
     
