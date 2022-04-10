@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/win7%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BB%BA%E7%AB%8BSSH%E8%BF%9E%E6%8E%A5/7.jpg">
 <meta property="article:published_time" content="2022-04-09T10:10:52.000Z">
-<meta property="article:modified_time" content="2022-04-10T12:37:03.995Z">
+<meta property="article:modified_time" content="2022-04-10T12:46:40.840Z">
 <meta property="article:author" content="Sycamore">
 <meta property="article:tag" content="虚拟机">
 <meta property="article:tag" content="Windows">
@@ -219,7 +219,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.7k 字
+      3.2k 字
     </span>
   
 
@@ -228,7 +228,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      32 分钟
+      27 分钟
     </span>
   
 
@@ -348,7 +348,7 @@
 <p><strong>解决方法：</strong></p>
 <ol>
 <li>下载安装 <strong>补丁kb4474419</strong> 来支持SHA2算法。<br><a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419">下载地址</a><br>选择<strong>符合的版本</strong>下载（本文用的是 企业版的 <strong>x64</strong> ，也不是啥 <strong>服务器</strong> 版本，直接下载最后的即可）：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm25.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br></li>
-<li>利用 <strong>FTP</strong> 传入虚拟机<br>因为没有安装 <strong>VMwarae-Tools</strong>，所以虚拟机里 <strong>没有网络连接</strong>，也不能搞<strong>共享文件夹</strong>，只能使用 <strong>FTP</strong> 把补丁传进去。<br>推荐 <strong>工具+文章</strong>：[]（工具轻量便捷，当然你也可以自己搭 <strong>FTP</strong>）<br></li>
+<li>利用 <strong>FTP</strong> 传入虚拟机<br>因为没有安装 <strong>VMwarae-Tools</strong>，所以虚拟机里 <strong>没有网络连接</strong>，也不能搞<strong>共享文件夹</strong>，只能使用 <strong>FTP</strong> 把补丁传进去。<br>推荐 <strong>工具+文章</strong>：<a href="https://blog.sycamore.top/2022/04/09/%E5%88%A9%E7%94%A83CDaemon%E6%90%AD%E5%BB%BAFTP%E6%9C%8D%E5%8A%A1/">利用3CDaemon搭建FTP服务</a>（工具轻量便捷，当然你也可以自己搭 <strong>FTP</strong>）<br></li>
 <li>传入后，双击<strong>运行</strong> 补丁文件 即可（选择默认）：<br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm26.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm26.png</a> &#x3D;300x150)![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm27.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm27.png</a> &#x3D;300x)![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm28.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm28.png</a> &#x3D;300x200)![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm29.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm29.png</a> &#x3D;300x200)<br></li>
 <li>重启后，可<strong>正常</strong>安装</li>
 </ol>
@@ -379,15 +379,15 @@
 <ul>
 <li><strong>2. 配置sshd服务:</strong><br></li>
 </ul>
-<p><strong>配置开机自启sshd服务：</strong><br>命令：<code>sc config sshd start= auto</code><br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm46.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm46.png</a> &#x3D;600x)<br><br><strong>开启 sshd 服务：</strong><br>命令：<code>net start sshd</code><br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm47.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm47.png</a> &#x3D;600x)<br><br><strong>开启 22 端口</strong><br>（已关闭防火墙的不用执行）<br>命令：<code>netsh advfirewall firewall add rule name=sshd dir=in action=allow protocol=TCP localport=22</code><br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm48.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm48.png</a> &#x3D;600x)</p>
+<p><strong>配置开机自启sshd服务：</strong><br>命令：<code>sc config sshd start= auto</code><br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm46.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br><br><strong>开启 sshd 服务：</strong><br>命令：<code>net start sshd</code><br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm47.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br><br><strong>开启 22 端口</strong><br>（已关闭防火墙的不用执行）<br>命令：<code>netsh advfirewall firewall add rule name=sshd dir=in action=allow protocol=TCP localport=22</code><br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm48.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 <h4 id="Xshell-连接试验"><a href="#Xshell-连接试验" class="headerlink" title="Xshell 连接试验"></a>Xshell 连接试验</h4><ol>
-<li><p>命令：<code> ipconfig</code>，获取当前 Win7 虚拟机的 <strong>IP 地址</strong> ：192.168.158.135<br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm49.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm49.png</a> &#x3D;600x)</p>
+<li><p>命令：<code> ipconfig</code>，获取当前 Win7 虚拟机的 <strong>IP 地址</strong> ：192.168.158.135<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm49.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 </li>
-<li><p><strong>Xshell</strong> 建立新会话：<br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm50.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm50.png</a> &#x3D;600x)</p>
+<li><p><strong>Xshell</strong> 建立新会话：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm50.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 </li>
-<li><p>接收保存 Win7 虚拟机 SSH <strong>密钥</strong>：<br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm51.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm51.png</a> &#x3D;400x)</p>
+<li><p>接收保存 Win7 虚拟机 SSH <strong>密钥</strong>：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm51.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 </li>
-<li><p>输入正确的 <strong>用户名</strong>、<strong>密码</strong> 后，成功登录 Win7：<br>![](<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm52.png">https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm52.png</a> &#x3D;600x)</p>
+<li><p>输入正确的 <strong>用户名</strong>、<strong>密码</strong> 后，成功登录 Win7：<br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/win7vm52.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 </li>
 </ol>
 
