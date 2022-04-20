@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/Kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/kali2.png">
 <meta property="article:published_time" content="2022-04-09T07:53:08.000Z">
-<meta property="article:modified_time" content="2022-04-10T11:39:49.198Z">
+<meta property="article:modified_time" content="2022-04-11T13:01:51.816Z">
 <meta property="article:author" content="Sycamore">
 <meta property="article:tag" content="虚拟机">
 <meta property="article:tag" content="Kali">
@@ -219,7 +219,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      703 字
+      808 字
     </span>
   
 
@@ -228,7 +228,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      7 分钟
     </span>
   
 
@@ -269,7 +269,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 小时前
+                  本文最后更新于：9 天前
                 
               </p>
             
@@ -302,12 +302,16 @@
 <h3 id="⑤创建共享文件夹"><a href="#⑤创建共享文件夹" class="headerlink" title="⑤创建共享文件夹"></a>⑤创建共享文件夹</h3><blockquote>
 <p>命令： <code>/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other</code><br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare5.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
 </blockquote>
+<h3 id="⑥开机自动挂载共享文件夹"><a href="#⑥开机自动挂载共享文件夹" class="headerlink" title="⑥开机自动挂载共享文件夹"></a>⑥开机自动挂载共享文件夹</h3><blockquote>
+<p>命令：<code>vim /etc/fstab</code> ，更改文件 <code>/etc/fstab</code><br>文末添加：<code>.host:/  /mnt/hgfs/  fuse.vmhgfs-fuse   allow_other   0       0</code><br><img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare6.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></p>
+</blockquote>
 <h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
 <li><strong>VMware 设置</strong> 添加共享目录<br></li>
 <li>安装 <strong>Vmware-Tools</strong> （已安装则<strong>可省略</strong>）<br></li>
 <li>命令行<strong>查看</strong>共享目录（检查 <strong>VMware 设置</strong>里是否创建成功）<br></li>
 <li>新建文件夹（目录固定，名字与 <strong>1</strong> 中相同）<br></li>
-<li><strong>创建</strong>共享文件夹</li>
+<li><strong>创建</strong>共享文件夹<br></li>
+<li>开机<strong>自动挂载</strong>共享文件夹</li>
 </ol>
 
             </div>
