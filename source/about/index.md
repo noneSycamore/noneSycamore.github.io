@@ -3,9 +3,12 @@ title: about
 date: 2022-03-13 19:30:42
 layout: about
 ---
-<center>本质上是一个[CTFer](https://www.sycamore.top)吧（⊙ｏ⊙）</center>
-<center>其实也喜欢在电脑上或者是服务器上乱搞（。＾▽＾）</center>
-<center>**这里**，就是记录一下，</center>
-<center>从我获得**电脑**，以及**云服务器**以来，究竟乱搞了点什么事情的地方</center>
+<center>不会[搞机](https://blog.sycamore.top)的[开发猿](https://www.sycamore.top)不是一个好的[CTFer](https://www.sycamore.top)（⊙ｏ⊙）</center>
+<center>所以本人除了正事之外，还热衷于对自己的设备乱搞</center>
+<center>本站就是用来 **记录** 我究竟搞了些什么东西的地方：</center>
+<center>**笔记本**</center>
+<center>**云服务器**</center>
+<center>**虚拟机**</center>
+<center>**...**</center>
 <center>つ﹏⊂</center>
 
