@@ -5,8 +5,8 @@ tags: [Kali,虚拟机]
 categories: 
  - 虚拟机
  - Kali-Linux
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/23/KALI%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E8%AE%BE%E7%BD%AE/lazy.jpg
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/23/KALI%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E8%AE%BE%E7%BD%AE/lazy.jpg
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033144/Typera/2023/12/b7ea9d1222bacb7781961d44117c400f.jpg
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033144/Typera/2023/12/b7ea9d1222bacb7781961d44117c400f.jpg
 ---
 对 kali 启动设置的几种懒人向的优化
 <!-- more -->

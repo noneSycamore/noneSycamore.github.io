@@ -5,13 +5,14 @@ tags: [云服务器,WordPress]
 categories:
  - 云服务器 
  - WordPress
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/1.jpg
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033810/Typera/2023/12/6c1cf55e7f50b9ff2de9651151f5fef1.jpg
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033810/Typera/2023/12/6c1cf55e7f50b9ff2de9651151f5fef1.jpg
 ---
 这篇文章，前后两部分要分开看，
 宝塔添加站点（自由安装博客系统）+一键部署WordPress
-（依旧是小白向）
+（依旧是小白向)
 <!-- more -->
+
 ## 哔哔~
 宝塔面板真的非常方便啊 d(*￣▽￣)==b
 

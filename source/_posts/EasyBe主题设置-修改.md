@@ -5,10 +5,10 @@ tags: [云服务器,Typecho,主题]
 categories:
  - 云服务器 
  - Typecho
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/15/EasyBe%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE-%E4%BF%AE%E6%94%B9/1.png
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/15/EasyBe%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE-%E4%BF%AE%E6%94%B9/1.png
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033083/Typera/2023/12/a766ea43fafdaf2231d9b0686c1a16a6.png
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033083/Typera/2023/12/a766ea43fafdaf2231d9b0686c1a16a6.png
 ---
-记录：我尝试搭建Typecho的博客——EasyBe，并粗略美化修改（挺精美的主题）
+记录：我尝试搭建Typecho的博客——EasyBe，并粗略美化修改（挺精美的主题)
 <!-- more -->
 子域名下还可以搭网站，所以我就尝试搭了一下Typecho的博客，
 

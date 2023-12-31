@@ -5,8 +5,8 @@ tags: [云服务器,Typecho]
 categories:
  - 云服务器 
  - Typecho
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/Typecho%E5%AE%89%E8%A3%85%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/1.png
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/Typecho%E5%AE%89%E8%A3%85%E3%80%81%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/1.png
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033556/Typera/2023/12/9130289fab8c8fd13edb68a0aee26b93.png
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033556/Typera/2023/12/9130289fab8c8fd13edb68a0aee26b93.png
 ---
 记录安装Typecho的方法，以及主题、插件的安装方式。
 <!-- more -->

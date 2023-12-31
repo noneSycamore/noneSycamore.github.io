@@ -5,8 +5,8 @@ tags: [Windows,虚拟机]
 categories: 
  - 虚拟机
  - Windows
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/win7%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BB%BA%E7%AB%8BSSH%E8%BF%9E%E6%8E%A5/7.jpg
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/win7%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BB%BA%E7%AB%8BSSH%E8%BF%9E%E6%8E%A5/7.jpg
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033585/Typera/2023/12/63228774434ce50625d92068912c6ef0.jpg
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033585/Typera/2023/12/63228774434ce50625d92068912c6ef0.jpg
 ---
 Win7 虚拟机搭建的 二三事
 <!-- more -->

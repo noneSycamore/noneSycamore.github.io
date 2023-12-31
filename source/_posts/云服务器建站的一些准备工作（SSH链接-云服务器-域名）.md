@@ -5,11 +5,12 @@ tags:
  - 云服务器
 categories:
  - 云服务器 
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%EF%BC%88SSH%E9%93%BE%E6%8E%A5-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%9F%9F%E5%90%8D%EF%BC%89/1.png
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/14/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%EF%BC%88SSH%E9%93%BE%E6%8E%A5-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%9F%9F%E5%90%8D%EF%BC%89/1.png
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033631/Typera/2023/12/c43263b34627fac26ec87779753d5693.png
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033631/Typera/2023/12/c43263b34627fac26ec87779753d5693.png
 ---
-讲讲用云服务器建站前的一些准备工作（必备的工具推荐+要购置的东西）
+讲讲用云服务器建站前的一些准备工作（必备的工具推荐+要购置的东西)
 <!-- more -->
+
 ## 前言~
 开始建站之前，你需要完成拥有以下设备或者工具：
 - 找个好用的SSH工具

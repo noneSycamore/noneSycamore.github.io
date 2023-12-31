@@ -4,8 +4,8 @@ date: 2022-04-09 21:13:52
 tags: [虚拟机,FTP]
 categories: 
  - 虚拟机
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/%E5%88%A9%E7%94%A83CDaemon%E6%90%AD%E5%BB%BAFTP%E6%9C%8D%E5%8A%A1/3CDaemon.jpg
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/%E5%88%A9%E7%94%A83CDaemon%E6%90%AD%E5%BB%BAFTP%E6%9C%8D%E5%8A%A1/3CDaemon.jpg
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033737/Typera/2023/12/65ded4aab38ef01f86a17c06e881f706.jpg
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033737/Typera/2023/12/65ded4aab38ef01f86a17c06e881f706.jpg
 ---
 因为安装 Win7 虚拟机，被迫搞出来的 FTP 服务
 <!-- more -->

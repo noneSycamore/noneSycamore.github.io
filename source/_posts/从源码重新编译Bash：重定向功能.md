@@ -5,11 +5,12 @@ tags: [Kali,虚拟机]
 categories:
  - 虚拟机
  - Kali-Linux
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/20/%E4%BB%8E%E6%BA%90%E7%A0%81%E9%87%8D%E6%96%B0%E7%BC%96%E8%AF%91Bash%EF%BC%9A%E9%87%8D%E5%AE%9A%E5%90%91%E5%8A%9F%E8%83%BD/bash.jpg
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/20/%E4%BB%8E%E6%BA%90%E7%A0%81%E9%87%8D%E6%96%B0%E7%BC%96%E8%AF%91Bash%EF%BC%9A%E9%87%8D%E5%AE%9A%E5%90%91%E5%8A%9F%E8%83%BD/bash.jpg
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033693/Typera/2023/12/3ea0ff03af3b42b348eeb0416d6a28d1.jpg
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033693/Typera/2023/12/3ea0ff03af3b42b348eeb0416d6a28d1.jpg
 ---
 Kali 中预装的 bash 没有编译 重定向功能，所以要用到 -e 选项，需要重新编译 bash
 <!-- more -->
+
 ## 重新编译 Bash 的原因
 大部分 **Linux** 版本都已经 **预装了 bash**，
 但是我的 **Kali** 虚拟机，貌似默认**没开 bash 的 网络重定向** 功能（ **-e** 不能使用），

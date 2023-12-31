@@ -6,10 +6,10 @@ categories:
  - 虚拟机
  - Kali-Linux
  - 后门
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/21/LINUX%E5%90%8E%E9%97%A8%E5%A4%8D%E7%8E%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/kali.png
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/03/21/LINUX%E5%90%8E%E9%97%A8%E5%A4%8D%E7%8E%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/kali.png
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033507/Typera/2023/12/f6bc736975fca644e150849c3e662711.png
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033507/Typera/2023/12/f6bc736975fca644e150849c3e662711.png
 ---
-采用虚拟机（**kali**-Linux）作为目标服务器，从 Windows 主机通过 **ssh** （Xshell）连接虚拟机，模拟getshell场景。
+采用虚拟机（**kali**-Linux）作为目标服务器，从 Windows 主机通过 **ssh** （Xshell)连接虚拟机，模拟getshell场景。
 <!-- more -->
 
 ## VMware创建Kali虚拟机

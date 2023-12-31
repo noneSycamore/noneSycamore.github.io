@@ -5,8 +5,8 @@ tags: [Kali,虚拟机]
 categories: 
  - 虚拟机
  - Kali-Linux
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/Kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/kali2.png
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/09/Kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/kali2.png
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033464/Typera/2023/12/d264247e34cfddb13d09c3a03d792b0e.png
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033464/Typera/2023/12/d264247e34cfddb13d09c3a03d792b0e.png
 ---
 KALI 虚拟机创建 共享文件夹，方便主机和虚拟机之间的 文件传输。
 <!-- more -->

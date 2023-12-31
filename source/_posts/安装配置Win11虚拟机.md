@@ -5,11 +5,12 @@ tags: [Windows,虚拟机]
 categories: 
  - 虚拟机
  - Windows
-index_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/10/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEWin11%E8%99%9A%E6%8B%9F%E6%9C%BA/11.jpg
-banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022/04/10/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEWin11%E8%99%9A%E6%8B%9F%E6%9C%BA/11.jpg
+index_img: https://res.cloudinary.com/sycamore/image/upload/v1704033769/Typera/2023/12/25793f68127f486bbbaa7d5bb6499ce4.jpg
+banner_img: https://res.cloudinary.com/sycamore/image/upload/v1704033769/Typera/2023/12/25793f68127f486bbbaa7d5bb6499ce4.jpg
 ---
 手贱...删了电脑里所有的虚拟机，还没有备份...这是重新安装 Win11 的记录
 <!-- more -->
+
 ## Win11 镜像下载
 还是 **MSDN** 香啊！
 同域名下的另一个网站（试运行）：[NEXT, ITELLYOU](https://next.itellyou.cn/)
@@ -110,13 +111,13 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 <img src="https://res.cloudinary.com/sycamore/image/upload/v1704012778/Typera/2023/12/f656802af2a999811f4fe02887b4a46d.png" width=300 />
 
 2. 耐心等待运行 **安装向导**，
-  如果实在是太慢了，等不及了，就进入 **文件资源管理器**，找到 D 盘，双击运行 `setup64` 程序：
-  （这个 **DVD 驱动器(D:)** ，只有 第一步点了 `安装 VMware-Tools` 按钮之后才有）
-  <img src="https://res.cloudinary.com/sycamore/image/upload/v1704012842/Typera/2023/12/b3954036aa9224ddccd91c871f7f8893.png" style="zoom: 33%;" />
+    如果实在是太慢了，等不及了，就进入 **文件资源管理器**，找到 D 盘，双击运行 `setup64` 程序：
+    （这个 **DVD 驱动器(D:)** ，只有 第一步点了 `安装 VMware-Tools` 按钮之后才有）
+    <img src="https://res.cloudinary.com/sycamore/image/upload/v1704012842/Typera/2023/12/b3954036aa9224ddccd91c871f7f8893.png" style="zoom: 33%;" />
 3. 两个加载的 弹窗 之后，成功打开 **安装向导**：
-  （只需要注意选择 **典型安装** ，**Win11** 的 **VMware-Tools** 大概率不会报错）
-  安装完成后，**重新启动** 虚拟机
-  <img src="https://res.cloudinary.com/sycamore/image/upload/v1704012962/Typera/2023/12/9ae5db46573b558302c65d16791c0254.png" style="zoom: 25%;" /><img src="https://res.cloudinary.com/sycamore/image/upload/v1704013014/Typera/2023/12/2d1c0f84cbcffce42beae398d2f623e9.png" style="zoom: 25%;" />
+    （只需要注意选择 **典型安装** ，**Win11** 的 **VMware-Tools** 大概率不会报错）
+    安装完成后，**重新启动** 虚拟机
+    <img src="https://res.cloudinary.com/sycamore/image/upload/v1704012962/Typera/2023/12/9ae5db46573b558302c65d16791c0254.png" style="zoom: 25%;" /><img src="https://res.cloudinary.com/sycamore/image/upload/v1704013014/Typera/2023/12/2d1c0f84cbcffce42beae398d2f623e9.png" style="zoom: 25%;" />
 
 ## 激活 Win11 专业版
 
@@ -133,14 +134,14 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
   <img src="https://res.cloudinary.com/sycamore/image/upload/v1704013159/Typera/2023/12/ced00a4b004c06e9f2356edb2e01e04c.png" width=600 height=300 style="zoom: 67%;" />
 
 2. **设置 KMS 服务器**，
-  命令：`slmgr /skms s8.uk.to`
-  如果执行失败，说明该 KMS 服务器 可能已失效。
-  尝试**更换** 该命令后半部分的 **KMS 服务器名**，[查询地址传送门](https://kms.msguides.com/)
-  <img src="https://res.cloudinary.com/sycamore/image/upload/v1704013199/Typera/2023/12/9358882fffe07ef3c3e3db876afad89e.png" style="zoom: 33%;" />
+    命令：`slmgr /skms s8.uk.to`
+    如果执行失败，说明该 KMS 服务器 可能已失效。
+    尝试**更换** 该命令后半部分的 **KMS 服务器名**，[查询地址传送门](https://kms.msguides.com/)
+    <img src="https://res.cloudinary.com/sycamore/image/upload/v1704013199/Typera/2023/12/9358882fffe07ef3c3e3db876afad89e.png" style="zoom: 33%;" />
 
 3. **激活 Windows**
-  命令：`slmgr /ato`
-  <img src="https://res.cloudinary.com/sycamore/image/upload/v1704013202/Typera/2023/12/36bc8abb1ec174ec21129bf9f854bd61.png" style="zoom:33%;" />
+    命令：`slmgr /ato`
+    <img src="https://res.cloudinary.com/sycamore/image/upload/v1704013202/Typera/2023/12/36bc8abb1ec174ec21129bf9f854bd61.png" style="zoom:33%;" />
 
 成功**激活** ！
 <img src="https://res.cloudinary.com/sycamore/image/upload/v1704013205/Typera/2023/12/c27217ec83ab6a9f50cd4ca7f0d53139.png" style="zoom: 25%;" />
