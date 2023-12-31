@@ -24,12 +24,12 @@ Kali 中预装的 bash 没有编译 重定向功能，所以要用到 -e 选项�
 - 查看系统使用的 **Shell**：
 	- `echo $SHELL`
 	- 可以看到 Kali Linux 用的是 **zsh**：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash2.png)
+	<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011789/Typera/2023/12/a6dc5cf7a829a5a6097d237405661fca.png" style="zoom: 50%;" />
 
 <br>
 - 查看 **bash** 的版本：
 	- `bash --version` 
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash1.png)
+	<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011798/Typera/2023/12/72468c0ebb118510e769b5b84090330a.png" style="zoom: 50%;" />
 
 ## 下载安装 Bash
 **Linux** 下安装 **bash** 实际上有三种方式：
@@ -50,14 +50,14 @@ RPM 包安装、yum 安装、从源码安装。
 然后你可以直接通过浏览器下载，或者使用 **wget**：
 `wget https://ftp.gnu.org/gnu/bash/bash-5.1.16.tar.gz`
 如图：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash3.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011808/Typera/2023/12/34cc060cd5b5566b1e3199248a5d1b9d.png" style="zoom:50%;" />
 
 ### 解压
 **解压**源码包 并 **进入**生成的目录：
 
 解压：`tar zxvf bash-5.1.16.tar.gz `
 解压后，会在当前目录下生成一个 **bash-** 目录：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash4.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011821/Typera/2023/12/f735c3f744f1c15416e9ed316c072c5e.png" style="zoom: 50%;" />
 
 进入目录：`cd bash-5.1.16`
 
@@ -65,14 +65,14 @@ RPM 包安装、yum 安装、从源码安装。
 `--prefix` 参数指定 **安装目录**，`--enable-net-redirections` 为 bash 添加 **重定向功能**
 
 命令：`./configure --prefix=/usr/local/bash --enable-net-redirections`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash5.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011834/Typera/2023/12/56ff26d1b92b96426325dc707626d147.png" style="zoom:50%;" />
 
 ### 编译 & 安装
 编译命令：`make`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash6.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011840/Typera/2023/12/06946af30cebfad1df042a0913409994.png" style="zoom:50%;" />
 
 安装命令：`make install`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash7.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011843/Typera/2023/12/071576989e4ab50a87b4319ab34c6adc.png" style="zoom:50%;" />
 
 ## 更换使用
 - 把新安装的 bash 添加到 `/etc/shells` 文件中：`echo "/usr/local/bash/bin/bash" >> /etc/shells`
@@ -80,6 +80,6 @@ RPM 包安装、yum 安装、从源码安装。
 - 重启：`reboot`
 
 更换后，查看使用的 Shell ：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/rebash8.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011845/Typera/2023/12/04a9e7185976fdfa19a6a6f9dec41af1.png" style="zoom:50%;" />
 
 成功！

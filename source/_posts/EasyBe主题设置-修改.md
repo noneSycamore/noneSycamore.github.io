@@ -13,6 +13,7 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 子域名下还可以搭网站，所以我就尝试搭了一下Typecho的博客，
 
 ## EasyBe主题安装
+
 Typecho安装请看：
 
 使用宝塔将EasyBe主题压缩包上传到usr/themes文件夹下，然后解压即可完成主题的初步安装
@@ -26,8 +27,9 @@ Typecho安装请看：
 
 虽然这一开始也很让人困惑，但是在参考了[开发者的GitHub](https://github.com/wangyang0210/EasyBe "开发者的GitHub")之后，还是完成了初步的配置，
 总体来说，这个主题还是挺好看的
-![如图是侧边栏展开的首页封面图](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb1.jpg "如图是菜单栏展开的首页封面图")
-![如图是页脚的画面，挺精美的](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb2.jpg "如图是页脚的画面，挺精美的")
+![如图是侧边栏展开的首页封面图](https://res.cloudinary.com/sycamore/image/upload/v1704010121/Typera/2023/12/785874ea60c0b6e6be9cdde24faa5826.jpg "如图是菜单栏展开的首页封面图")
+![如图是页脚的画面，挺精美的](https://res.cloudinary.com/sycamore/image/upload/v1704010380/Typera/2023/12/7cfa5360d7b0fbbd1484efcf487e7624.jpg "如图是页脚的画面，挺精美的")
+
 ### 具体方法
 #### **头像**。**昵称**、**职业**、**居住地**
 这些就不说了，这些信息会出现在侧边栏顶部区域，
@@ -286,7 +288,8 @@ Typecho安装请看：
 **webpageTitleFocus**：你离开后回到博客页面显示的文字
 **webpageTitleOnblurTimeOut**、**webpageTitleFocusTimeOut**不用修改，表示文字失效时间
 **webpageIcon**：你的网站图标，就是显示在浏览器标签栏里的那个
-![左侧的是网站图标](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb4.jpg "左侧的是网站图标")
+![左侧的是网站图标](https://res.cloudinary.com/sycamore/image/upload/v1704010229/Typera/2023/12/255076c34fe294441cc723a9c262a40a.jpg "左侧的是网站图标")
+
 ```html
        // ---- 网站配置 ----
         webpageTitleOnblur        : "(◍´꒳`◍) Hi, MyFriend", 
@@ -375,6 +378,7 @@ loading的**原配置**：
 
 **homeTopImg**是主页封面大图的配置，里面填充自己想放的图片，会随机显示，
 貌似**homeBannerTextType**能设置一言标语，尚未成功...
+
 ```html
         // ---- 主页配置 ----
         homeTopImg    : [ 
@@ -401,7 +405,8 @@ loading的**原配置**：
 **essayTopImg**可以设置随笔页封图，填写多个会随机显示，
 **essayCodeHighlightingType**、**essayCodeHighlighting**无需更改，原主题就很不错了，不过你也可以根据cnblog的进行修改
 **aboutHtml**、**copyrightHtml**：出现文章末尾
-![评论上方](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb5.jpg "评论上方")
+![评论上方](https://res.cloudinary.com/sycamore/image/upload/v1704010239/Typera/2023/12/8a4f73d87359bda7f9e20dde80425052.jpg "评论上方")
+
 ```html
         // ---- 随笔页配置 ----
         essayTopImg: [ 
@@ -437,32 +442,34 @@ loading的**原配置**：
 #### 左下角歌单修改
 试了一下，这个左下角的播放器内的歌单应该是网易云音乐的，
 如果不满意那里设定的歌单的话，或者想要DIY整个自己的，可以去**footer.php**修改你中意的歌单id，如下图↓
-![歌单id修改](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb6.jpg "歌单id修改")
+![歌单id修改](https://res.cloudinary.com/sycamore/image/upload/v1704010250/Typera/2023/12/df332927842a389d463ca0e299138c61.jpg "歌单id修改")
 如果不知道歌单id在哪里的话，直接点开你要的歌单的**网页**，下图中画红线的部分就是你要找的歌单id.
-![找歌单id](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb7.jpg "找歌单id")
+![找歌单id](https://res.cloudinary.com/sycamore/image/upload/v1704010297/Typera/2023/12/aecfba482a467d67e2d2004619c9a70b.jpg "找歌单id")
+
 #### 脑壳疼
 随笔页的最后都摆了3个“脑壳疼”的链接，如果你试着点击，就会发现实际上这里啥也没有(/▽＼)
 如果你对这里想放啥，有了成熟的想法，你可以尝试去修改**post.php**文件，
-![脑壳疼修改](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb8.jpg "脑壳疼修改")
+![脑壳疼修改](https://res.cloudinary.com/sycamore/image/upload/v1704010311/Typera/2023/12/9e4497561eff3b65ad747bb8c116c72b.jpg "脑壳疼修改")
 具体方法已给出（就是我也实在没啥好的想法，只是看了一下该怎么改，没有尝试，不保证此方法的正确性）(￣▽￣)"
 ####侧边栏链接修改
 这个主题的侧边栏还是很好看的，就是如果我们想DIY这里（↓）的链接的话，还是得去主题文件里改
-![侧边栏链接展示](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb9.jpg "侧边栏链接展示")
+![侧边栏链接展示](https://res.cloudinary.com/sycamore/image/upload/v1704010339/Typera/2023/12/25f52eb6201ae5c4cc420f4fa7a003c7.jpg "侧边栏链接展示")
 
 主要的代码在**sidebar.php**文件里，
 其中**首页**、**管理**、**添加随笔**这三个如果不了解尽量不用去动（也没必要）
 **联系**的链接是用于拉起无需好友验证的*QQ会话*，如需修改，首先要将**“UIN=”**字符后面的QQ号改成自己的（如果你的QQ在线状态服务已开启，就不用后面的动作了），
-![侧边栏链接修改位置](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb10.jpg "侧边栏链接修改位置")
+![侧边栏链接修改位置](https://res.cloudinary.com/sycamore/image/upload/v1704010350/Typera/2023/12/f1b914c920047bb0a7bd957461f031e1.jpg "侧边栏链接修改位置")
 
 然后去这个官网链接（http://shang.qq.com/v3/index.html） ，点击最上方的推广工具，再点击左侧的设置.
-![QQ会话服务开启](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb11.jpg "QQ会话服务开启")
+![QQ会话服务开启](https://res.cloudinary.com/sycamore/image/upload/v1704010358/Typera/2023/12/dd27498eb41b9bfa860692909a9f12c7.jpg "QQ会话服务开启")
 
 找到会话能力，单击保存即可.
-![QQ会话服务开启](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/eb12.jpg "QQ会话服务开启")
+![QQ会话服务开启](https://res.cloudinary.com/sycamore/image/upload/v1704010367/Typera/2023/12/d6ee6b510dc9b40534bd09b4b59d69e1.jpg "QQ会话服务开启")
 
 这样联系点开的就是和你的QQ会话了（注意必须是手机，其次如果你测试的时候，QQ登的是你的号，那是拉不出这个会话的）
 
 余下的链接修改就简单了，前两张的图里，红色方框改的是显示的文字，蓝色框里改的是对应的链接
+
 ## 总结
 
 以上就是EasyBe主题的配置修改的全部内容，当然这只是最粗浅的改动，我最满意的地方还是DIY的那个loading动画(oﾟvﾟ)ノ.
