@@ -23,14 +23,14 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 
 最新的几版 Kali ，默认把直接**用 root 用户登录**给关了，
 也就是说，你在这个 ↓ 界面，用户名 **root** ，密码也**正确**，还是进不去的。
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login2.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010452/Typera/2023/12/a402df1a20b236ddcbcf1eee3e254813.png)
 我们需要经过设置才能以 root 身份登录 Kali ：
 
 1. 启动 kali 虚拟机，在下图所示的**引导页面**，按 **e** 进入编辑模式：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login1.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010455/Typera/2023/12/ee9e095803026b6734c0a8c908209e6f.png)
 2. 修改以下红框内容（`ro quite splash`）为 `rw init=/bin/sh splash`，然后按 **Ctrl + X** 退出编辑模式，重启系统
-修改前：![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login3.png)
-修改后：![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login4.png)
+修改前：![](https://res.cloudinary.com/sycamore/image/upload/v1704010458/Typera/2023/12/511e5615a8474f12b4de12e701c32d67.png)
+修改后：![](https://res.cloudinary.com/sycamore/image/upload/v1704010528/Typera/2023/12/2711dc66462686c032f9aaa47489fe83.png)
 
 现在，就可以用 root **直接登陆**了
 
@@ -49,17 +49,17 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 <br>
 2. 找到 **[Seat:*]** 这一行，在它的**下方**添加下面两行代码，或者**取消**这两行代码的**注释**
 （一定要是 **Seat**下面，因为它的**前面**有**一样的**，被注释的代码，别搞错了）
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login5.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010461/Typera/2023/12/3d4b0b74cf92beadd8ecd4dfd9f9907c.png)
 添加的代码：
 `autologin-user=root`（用 **root** 用户登录，如果你想用**其他的用户**，改成对应的就行）
 `autologin-user-timeout=0`
 如图所示：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login6.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010465/Typera/2023/12/79cd91f5f023cbad0cc14f46c39d0119.png)
 保存退出：`Esc`+`:wq`
 <br>
 3. 修改pam相关的验证文件，输入命令：`vim /etc/pam.d/lightdm-autologin`，
 注释掉`auth required pam_succeed_if.so user != root quiet_success`这一行，完成~
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login10.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010468/Typera/2023/12/2d63a7f739e8266cde13b950dfe93f9b.png)
 <br>
 4. 重启查看效果：`reboot`
 
@@ -70,8 +70,8 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 
 ## 启动跳过5s引导界面
 就是这个：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login8.png)
-改了 **跳过登录页面** 之后，感觉这个**引导界面**又有点**多余**了（反正要用的时候再改回来）
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010471/Typera/2023/12/7bf93978563fcf67505a8dc94ac19443.png)
+改了 **跳过登录页面** 之后，感觉这个**引导界面**又有点**多余**了（反正要用的时候再改回来)
 因为要等的话，要等 **5s** ，不想等的话，还得按个**回车键**跳过~
 那我为了**释放双手**，自然得去掉这玩意
 
@@ -79,9 +79,9 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 编辑 grub 文件，因为 **Kali** 用的启动引导程序就是 **GRUB**
 <br>
 2. 将 **GRUB_TIMEOUT** 设置成 **0**（就是你**等待的时间**），保存退出：`Esc`+`:wq`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login7.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010474/Typera/2023/12/df74a7f1e325b85e1e40d39e1520b6d9.png)
 3. 命令：`update-grub` 更新文件，然后重启查看效果：`reboot`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login9.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010480/Typera/2023/12/cc110976411f12bcacdd0c9fa001c7d6.png)
 <br>
 到这里，就**改完了**，以后就能**直接进 root** ，而且**启动登录Kali**全程能够**释放双手**了~
 
@@ -91,7 +91,7 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 所以，你还要再输一遍用户密码，那为什么不**干脆关闭锁屏**呐？
 
 1. 打开电源设置 Power manager settings：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login12.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010479/Typera/2023/12/0759d1a59a1f52034cc9405a21936f9c.png)
 2. 点击 Security，取消勾选这个选项，就能关闭锁屏：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kali_login11.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010483/Typera/2023/12/5d4bcd7102648ae38c3565ddc0802b9c.png)
 然后直接关闭设置就行，Kali 里面没有**保存确定**之说

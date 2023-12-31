@@ -30,20 +30,22 @@ Typecho是一个体量和Wordpress相当的博客程序，各类主题、插件x
 ### 上传、解压
 用你的方式，上传压缩包到**网站根目录**
 以宝塔为例：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/typecho1.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010833/Typera/2023/12/b9b89bd1217d73b778ed9998579495a1.png)
 上传完毕之后，直接解压，然后你会获得一个build文件夹
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/typecho2.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010844/Typera/2023/12/4df9b42ebee9eaabbcb36648bf74c92f.png)
 进入build文件夹 -> 全选 -> 剪贴 -> 退出build文件夹，在根目录粘贴
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/typecho3.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010853/Typera/2023/12/85e02df271638fd1989e8a7752781b12.png)
+
 ### 信息填写
 进入你的域名，无误的话，你会看到这个：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/typecho4.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010863/Typera/2023/12/ffc77fe74d47807af977dda33fb112cc.png)
 
 点击 “我准备好了，开始下一步”
 
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/typecho5.jpeg)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010867/Typera/2023/12/a7b3b4540b951dd6e24aa42d637bcb38.jpg)
 这里的内容，详细请看：[宝塔添加站点+一键部署WordPress系统](https://blog.sycamore.top/2022/03/14/%E5%AE%9D%E5%A1%94%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2wordpress%E7%B3%BB%E7%BB%9F/) ，与WordPress极为相似，故不再赘述。
 其中，如下几项是**必须修改**的：
+
 - 数据库用户名
 - 数据库密码
 - 数据库名
@@ -58,7 +60,7 @@ Typecho是一个体量和Wordpress相当的博客程序，各类主题、插件x
 所有信息填写完毕之后，点击 “确认，开始安装”即可
 
 如果你看到这个画面，就说明你安装成功了
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/typecho6.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010872/Typera/2023/12/fdb159438670ee67f8f60c7986e260c9.png)
 ## Typecho基本配置
 因为要讲配置，这里就直接从上图的第一个链接进入**控制面板**了。
 个人设置什么的就不提了，

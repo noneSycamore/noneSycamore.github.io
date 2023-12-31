@@ -29,14 +29,14 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 打开Xshell -> 文件 -> 新建，你就能看到下图所示的窗口，按照图片的标注填好信息：
 
 
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env1.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010995/Typera/2023/12/ec0e3b63c1b6407381f5fc198204b88b.png)
 
 
 其中，会话的**名称**随意，**端口号**用默认的 22 就够了，唯一有疑问的，估计就是服务器（即虚拟机）的 **ip** 怎么写了。
 
 其实很简单，运行虚拟机，在 **Terminal** 窗口中输入 `ifconfig` 命令就能查看到虚拟机的 ip 了：
 
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env2.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011010/Typera/2023/12/03de79df0a7a5f15066393d8b3fdc732.png)
 
 比如上图中，我的 ip 就是 **192.168.168.128** ，把在这个填入表里就可以了。
 
@@ -44,7 +44,7 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 创建完会话就能成功连接了吗？
 
 嘿嘿，你大概率会是这样的：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env4.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011009/Typera/2023/12/44ad2149c5ece1467cd8f0dee447a105.png)
 
 下面说一下该怎么解决。
 
@@ -54,7 +54,7 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 如果你这时候直接尝试，是连接不通的。
 因为 kali **默认关闭了 ssh**，所以，我们还要**打开ssh服务**：`service ssh start`，
 然后**查看ssh的状态**：`service ssh status`，
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env3.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011014/Typera/2023/12/bf8774117739cb26e9767cc0b5a1f9f5.png)
 如果是这样 ssh 服务就成功开启了
 
 然后，我们还可以设置一下，ssh **开机自启**：`sudo systemctl enable ssh`
@@ -68,7 +68,7 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 你可能会发现，还是和上面一样，**连接不上**。（因为有**可能不会**出现这个错误）
 
 尝试 ping 一下虚拟机 ip：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env5.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011015/Typera/2023/12/c72106aee3f1d8b7ac9a24d572b59b36.png)
 总而言之就是还连接不上。
 
 **原因可能有很多种：**
@@ -79,8 +79,8 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 **解决方案是**：
 
 - 打开VMware -> 编辑 -> **虚拟网络编辑器** -> 右下角**更改设置**（不点的话操作不了）-> 选中 **Vmnet8**那一项 -> 勾选**将主机虚拟连接到此网络**
-（如果**已经勾上了**，重启一下这个服务：取消勾选，应用，然后再勾选一次，再应用即可）![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env6.png)
-现在应该就能连上了。（不怕麻烦的话，就先这样吧）
+（如果**已经勾上了**，重启一下这个服务：取消勾选，应用，然后再勾选一次，再应用即可）![](https://res.cloudinary.com/sycamore/image/upload/v1704011019/Typera/2023/12/97fccc2c2ee041cbd1e6feb5cacbf47d.png)
+现在应该就能连上了。（不怕麻烦的话，就先这样吧)
 <br><br>
 
 上述方法**确实可行**，但是，我在后续使用时**发现**：
@@ -102,18 +102,18 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 ### SSH服务拒绝密码
 如果你 ping 通了，可能还会遇到我的这个问题：
 
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env8.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011024/Typera/2023/12/4a17b7f6085ed11e25581ad4af01ad96.png)
 
 你输入的密码是正确的，但是提示：**SSH服务器拒绝了密码，请再试一次**
 
 **解决方法：**
 修改 ssh 针对服务器端的配置文件`vim /etc/ssh/sshd_config`
 如下图所示：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env7.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011028/Typera/2023/12/8900184ed3d063762a64a4307d9111e0.png)
 总而言之改成这样，有注释的取掉注释
 
 重启 ssh ：`systemctl restart sshd`
 重启虚拟机：`reboot`
 
 重新连接 Xshell：成功！
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/backdoor_env9.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704011029/Typera/2023/12/bc8a0d69bbf2c5972d1bb2864e8e36f7.png)

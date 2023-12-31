@@ -40,40 +40,41 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 （这篇文章仅包含**利用 3CDaemon 搭建 FTP 服务**）
 
 **图标：**
-<img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon1.png " width=200 height=200 />
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011885/Typera/2023/12/f10a491d66c5e04a1016ecd31a49031e.png" width=200 height=200 />
 
 **界面：**
-<img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon2.png " width=600 />
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011889/Typera/2023/12/f7b3d6d129125031066cacd9ce5c10dd.png" width=600 />
 
-**中文版下载**： -----> [下载地址](https://github.com/noneSycamore/blog_pic_url/raw/main/3CDaemon.EXE)
+**中文版下载**： -----> [下载地址](https://wwfx.lanzouw.com/iZB1B1jhcvab)
 （亲测**可用无毒**，要用官方英文版的就自行搜索吧）
+
 ## 主机配置 3CDaemon
 打开下载好的 **3CDaemon** 软件，在左侧栏中，点开 **FTP 服务器**，按照下图步骤完成 **FTP** 登录**用户**的设置：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon3.png)
-（反正是自用，用户权限就全给上了）
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011894/Typera/2023/12/615423cb09e8cc30df25f514104b5c75.png" style="zoom: 33%;" />
+（反正是自用，用户权限就全给上了)
 
 ## 虚拟机开启 FTP 服务
 **Win7** 默认是**没有**开启 **FTP** 服务的，所以我们要手动打开（在 **Win10** 也是差不多的操作）：
 
 1. 打开控制面版：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon4.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011915/Typera/2023/12/0e4dd4073edf1a7203edba702b455177.png" style="zoom:33%;" />
 <br>
 2. 单击 **程序** 进入设置：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon5.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011920/Typera/2023/12/7dddf1a4ef202599c19e5fa23cd21420.png" style="zoom:33%;" />
 <br>
 3. 进入 **打开或关闭 Windows 功能**，找到 **Internet 信息服务**，图中对应项**打勾**：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon6.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011927/Typera/2023/12/bdeb3214ab871b166ca35420068d8e0c.png" style="zoom:33%;" />
 <br>
 4. 等待一段时间后，跟随提示重启电脑
-<img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon7.png" width=300 />  <img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon8.png" width=300 />
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011932/Typera/2023/12/e134b0d8d04f3207fd43c1e482c58593.png" width=300 />  <img src="https://res.cloudinary.com/sycamore/image/upload/v1704011937/Typera/2023/12/a38bb7c8e6dffdb214fc552c161ec014.png" width=300 />
 
 ## 虚拟机连接 FTP 服务器
 首先确定虚拟机和主机之间能够**相互ping** 通，并且虚拟机已开启 **21** 端口（**关闭防火墙**也行）
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon9.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011944/Typera/2023/12/0e1c4286c2cb31e9e631e93a9c8d54fc.png" style="zoom: 50%;" />
 
 虚拟机打开 **CMD 窗口** ，输入：`ftp 主机IP`；
 按下图所示，依次输入**之前添加**的用户名、密码。
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon10.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011949/Typera/2023/12/8e5854aa74837703492c041e50623116.png" style="zoom:50%;" />
 连接成功！
 
 ## 如何简单地用FTP 传接文件
@@ -81,16 +82,16 @@ banner_img: https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/2022
 当我们在**虚拟机**中登录到 **FTP** 的时候，就是在这个**主机**的共享文件**目录**下。
 
 1. 在主机共享目录下，随便放一个文件：
-<img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon11.png " width=600 />
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011953/Typera/2023/12/d61ef3630797bf07569662996c7a5799.png" width=600 />
 <br>
 2. 虚拟机 **CMD** 终端输入 `dir` 命令查看共享目录下的文件：
-<img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon12.png" width=600 />
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011954/Typera/2023/12/765abe5446678f53520039688ba854cc.png" width=600 />
 <br>
 3. 使用 `get 文件名` 下载对应文件
 （如无意外，文件保存在 **进入FTP时所在的路径下**）
-<img src="https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon13.png" width=600 />
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704011958/Typera/2023/12/4309f3c1ed612bc24c6245b64c6b0fff.png" width=600 />
 <br>
 4. 输入 `by`，退出 **FTP**，关闭 **221** 服务
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/3CDaemon14.png)
+<img src="https://res.cloudinary.com/sycamore/image/upload/v1704012043/Typera/2023/12/1fba97d8fa5d61327fc9bb7f07b7e139.png" style="zoom:50%;" />
 
 **完成 ~~~**

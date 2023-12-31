@@ -105,4 +105,4 @@ deploy:
   type: git
   repo: https://github.com/noneSycamore/noneSycamore.github.io.git
   branch: master
-  token: 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
+  token: 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

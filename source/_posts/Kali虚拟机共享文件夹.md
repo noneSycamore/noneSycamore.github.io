@@ -20,13 +20,13 @@ KALI 虚拟机创建 共享文件夹，方便主机和虚拟机之间的 文件�
 
 
 
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare1.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010546/Typera/2023/12/d6ab80b4096b31d9e8277a1d2d17e15d.png)
 
 
 
 **主机路径**为主机上**共享文件夹目录**的位置；
 **名称**会默认填写为**主机路径**的文件夹名称：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare2.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010548/Typera/2023/12/c59203c3a6958a3352bb21e94c16cb71.png)
 
 
 
@@ -48,18 +48,20 @@ KALI 虚拟机创建 共享文件夹，方便主机和虚拟机之间的 文件�
 > 命令：`vmware-hgfsclient`
 
 反馈如下：
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare4.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010551/Typera/2023/12/fd165b4e941f29eb2b73528b4c890149.png)
+
 ### ④新建文件夹
 > 命令：`mkdir -p /mnt/hgfs/共享文件夹名`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare3.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010553/Typera/2023/12/fde917c65af6fc2e96f68686e71cfeb5.png)
 ### ⑤创建共享文件夹
 > 命令： `/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other`
-![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare5.png)
+![](https://res.cloudinary.com/sycamore/image/upload/v1704010556/Typera/2023/12/a6c609c7898331e555c1e1a2e217fd26.png)
 ### ⑥开机自动挂载共享文件夹
 > 命令：`vim /etc/fstab` ，更改文件 `/etc/fstab`
 > 文末添加：`.host:/  /mnt/hgfs/  fuse.vmhgfs-fuse   allow_other   0       0`
-> ![](https://cdn.jsdelivr.net/gh/noneSycamore/blog_pic_url/kalishare6.png)
+> ![](https://res.cloudinary.com/sycamore/image/upload/v1704010561/Typera/2023/12/4bc901d11c40cdadad0e5a26b4113a8f.png)
 ## 总结：
+
 1. **VMware 设置** 添加共享目录
 <br>
 2. 安装 **Vmware-Tools** （已安装则**可省略**）
