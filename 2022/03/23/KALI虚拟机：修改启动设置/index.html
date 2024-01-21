@@ -1,0 +1,808 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/favicon.png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Sycamore">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="对 kali 启动设置的几种懒人向的优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KALI虚拟机：修改启动设置">
+<meta property="og:url" content="https://blog.sycamore.top/2022/03/23/KALI%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E8%AE%BE%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Sycamoreの振り回す記録">
+<meta property="og:description" content="对 kali 启动设置的几种懒人向的优化">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://res.cloudinary.com/sycamore/image/upload/v1704033144/Typera/2023/12/b7ea9d1222bacb7781961d44117c400f.jpg">
+<meta property="article:published_time" content="2022-03-23T07:13:52.000Z">
+<meta property="article:modified_time" content="2024-01-17T06:37:12.999Z">
+<meta property="article:author" content="Sycamore">
+<meta property="article:tag" content="Kali">
+<meta property="article:tag" content="虚拟机">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://res.cloudinary.com/sycamore/image/upload/v1704033144/Typera/2023/12/b7ea9d1222bacb7781961d44117c400f.jpg">
+  
+  
+  
+  <title>KALI虚拟机：修改启动设置 - Sycamoreの振り回す記録</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.sycamore.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","app_key":"UtqevxNsaLBA4HlRcwUtwIYS","server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sycamoreの折腾记录</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://res.cloudinary.com/sycamore/image/upload/v1704033144/Typera/2023/12/b7ea9d1222bacb7781961d44117c400f.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="KALI虚拟机：修改启动设置"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Sycamore
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-03-23 15:13" pubdate>
+          2022年3月23日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">KALI虚拟机：修改启动设置</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    <!-- compatible with older versions-->
+                    本文最后更新于：4 天前
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>对 kali 启动设置的几种懒人向的优化</p>
+<span id="more"></span>
+
+<p><strong>起因</strong>是，在写 <a href="https://blog.sycamore.top/2022/03/21/LINUX%E5%90%8E%E9%97%A8%E5%A4%8D%E7%8E%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">LINUX 后门复现环境搭建</a> 的时候，总是需要 <code>reboot</code> 重启 kali 虚拟机，<br>然后我就发现：<strong>每次</strong>登录输密码啥的，实在是<strong>太麻烦了</strong>…<br>所以就有了这篇文章 O(∩_∩)O</p>
+<p>总而言之就是，对 kali 启动设置的几种<strong>懒人向</strong>的优化</p>
+<h2 id="允许-root-用户登录"><a href="#允许-root-用户登录" class="headerlink" title="允许 root 用户登录"></a>允许 root 用户登录</h2><p>（初次安装 Kali 记得<strong>最好</strong>先进 root 模式，然后 <code>passwd root</code> 命令设置 root 密码）</p>
+<p>最新的几版 Kali ，默认把直接<strong>用 root 用户登录</strong>给关了，<br>也就是说，你在这个 ↓ 界面，用户名 <strong>root</strong> ，密码也<strong>正确</strong>，还是进不去的。<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010452/Typera/2023/12/a402df1a20b236ddcbcf1eee3e254813.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>我们需要经过设置才能以 root 身份登录 Kali ：</p>
+<ol>
+<li>启动 kali 虚拟机，在下图所示的<strong>引导页面</strong>，按 <strong>e</strong> 进入编辑模式：<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010455/Typera/2023/12/ee9e095803026b6734c0a8c908209e6f.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></li>
+<li>修改以下红框内容（<code>ro quite splash</code>）为 <code>rw init=/bin/sh splash</code>，然后按 <strong>Ctrl + X</strong> 退出编辑模式，重启系统<br>修改前：<img src="https://res.cloudinary.com/sycamore/image/upload/v1704010458/Typera/2023/12/511e5615a8474f12b4de12e701c32d67.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>修改后：<img src="https://res.cloudinary.com/sycamore/image/upload/v1704010528/Typera/2023/12/2711dc66462686c032f9aaa47489fe83.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></li>
+</ol>
+<p>现在，就可以用 root <strong>直接登陆</strong>了</p>
+<h2 id="跳过登录页面直接进"><a href="#跳过登录页面直接进" class="headerlink" title="跳过登录页面直接进"></a>跳过登录页面直接进</h2><p>因为总是需要重启 <strong>Kali</strong> 虚拟机，然后<strong>每次重启</strong>都要输一遍账号密码。。。<br>实在是太<strong>麻烦</strong>了，我就想着该怎么<strong>跳过登录页面</strong>，直接进（释放双手）</p>
+<ol>
+<li>打开 Termial，输入命令：<code>vim /etc/lightdm/lightdm.conf</code><br>编辑 <strong>lightdm.conf</strong> 文件（因为 <strong>Kali</strong> 的登录界面就是 <strong>LightDM</strong> 的）<br></li>
+<li>找到 <strong>[Seat:*]</strong> 这一行，在它的<strong>下方</strong>添加下面两行代码，或者<strong>取消</strong>这两行代码的<strong>注释</strong><br>（一定要是 <strong>Seat</strong>下面，因为它的<strong>前面</strong>有<strong>一样的</strong>，被注释的代码，别搞错了）<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010461/Typera/2023/12/3d4b0b74cf92beadd8ecd4dfd9f9907c.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>添加的代码：<br><code>autologin-user=root</code>（用 <strong>root</strong> 用户登录，如果你想用<strong>其他的用户</strong>，改成对应的就行）<br><code>autologin-user-timeout=0</code><br>如图所示：<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010465/Typera/2023/12/79cd91f5f023cbad0cc14f46c39d0119.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>保存退出：<code>Esc</code>+<code>:wq</code><br></li>
+<li>修改pam相关的验证文件，输入命令：<code>vim /etc/pam.d/lightdm-autologin</code>，<br>注释掉<code>auth required pam_succeed_if.so user != root quiet_success</code>这一行，完成~<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010468/Typera/2023/12/2d63a7f739e8266cde13b950dfe93f9b.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br></li>
+<li>重启查看效果：<code>reboot</code></li>
+</ol>
+<h2 id="启动跳过5s引导界面"><a href="#启动跳过5s引导界面" class="headerlink" title="启动跳过5s引导界面"></a>启动跳过5s引导界面</h2><p>就是这个：<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010471/Typera/2023/12/7bf93978563fcf67505a8dc94ac19443.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>改了 <strong>跳过登录页面</strong> 之后，感觉这个<strong>引导界面</strong>又有点<strong>多余</strong>了（反正要用的时候再改回来)<br>因为要等的话，要等 <strong>5s</strong> ，不想等的话，还得按个<strong>回车键</strong>跳过~<br>那我为了<strong>释放双手</strong>，自然得去掉这玩意</p>
+<ol>
+<li>打开 Termial，输入命令：<code>vim /etc/default/grub	</code><br>编辑 grub 文件，因为 <strong>Kali</strong> 用的启动引导程序就是 <strong>GRUB</strong><br></li>
+<li>将 <strong>GRUB_TIMEOUT</strong> 设置成 <strong>0</strong>（就是你<strong>等待的时间</strong>），保存退出：<code>Esc</code>+<code>:wq</code><br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010474/Typera/2023/12/df74a7f1e325b85e1e40d39e1520b6d9.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></li>
+<li>命令：<code>update-grub</code> 更新文件，然后重启查看效果：<code>reboot</code><br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010480/Typera/2023/12/cc110976411f12bcacdd0c9fa001c7d6.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>
+到这里，就**改完了**，以后就能**直接进 root** ，而且**启动登录Kali**全程能够**释放双手**了~</li>
+</ol>
+<h2 id="补充：关闭自动锁屏"><a href="#补充：关闭自动锁屏" class="headerlink" title="补充：关闭自动锁屏"></a>补充：关闭自动锁屏</h2><p>有没有遇到一种情况，你在等待 Kail 完成某项长时间的操作，于是就先去干手头上一些其他的事情了，<br>然后等你回来的时候，发现 Kali <strong>已经锁屏</strong>了。。。<br>所以，你还要再输一遍用户密码，那为什么不<strong>干脆关闭锁屏</strong>呐？</p>
+<ol>
+<li>打开电源设置 Power manager settings：<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010479/Typera/2023/12/0759d1a59a1f52034cc9405a21936f9c.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload></li>
+<li>点击 Security，取消勾选这个选项，就能关闭锁屏：<br><img src="https://res.cloudinary.com/sycamore/image/upload/v1704010483/Typera/2023/12/5d4bcd7102648ae38c3565ddc0802b9c.png" srcset="https://cdn.jsdelivr.net/gh/noneSycamore/noneSycamore.github.io/img/loading.gif" lazyload><br>然后直接关闭设置就行，Kali 里面没有<strong>保存确定</strong>之说</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="category-chain-item">虚拟机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/Kali-Linux/" class="category-chain-item">Kali-Linux</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Kali/">#Kali</a>
+      
+        <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">#虚拟机</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>KALI虚拟机：修改启动设置</div>
+      <div>https://blog.sycamore.top/2022/03/23/KALI虚拟机：修改启动设置/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Sycamore</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年3月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/09/Kali%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9/" title="Kali虚拟机共享文件夹">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Kali虚拟机共享文件夹</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/21/LINUX%E5%90%8E%E9%97%A8%E5%A4%8D%E7%8E%B0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="LINUX后门复现环境搭建">
+                        <span class="hidden-mobile">LINUX后门复现环境搭建</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"8hD731DF1GeVsiEHGEGsmgPr-gzGzoHsz","appKey":"UtqevxNsaLBA4HlRcwUtwIYS","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       &copy; 2022 <a target="_blank" rel="noopener" href="https://www.sycamore.top"><strong>Sycamore</strong></a><br /> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>     
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
